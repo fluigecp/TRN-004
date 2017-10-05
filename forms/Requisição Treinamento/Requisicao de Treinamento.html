@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<head>
+		<title>Form</title>
+		<script type="text/javascript" src="../vcXMLRPC.js"></script>
+		<link rel="stylesheet" type="text/css" href="http://ecp.fluigcloud.com.br/portal/resources/style-guide/css/fluig-style-guide.min.css">
+		<link rel="stylesheet" type="text/css" href="CSS_Fluig.css" />
+		<link rel="stylesheet" type="text/css" href="app.css" />
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/js/jquery/jquery.js"></script>
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/js/jquery/jquery-ui.min.js"></script>
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/js/mustache/mustache-min.js"></script>
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/style-guide/js/fluig-style-guide.min.js"></script>
+		<!-- CUSTOM -->
+		<link href="http://ecp.fluigcloud.com.br/portal/resources/style-guide/css/fluig-style-guide-filter.min.css" rel="stylesheet" type="text/css">
+		<link href="http://ecp.fluigcloud.com.br/portal/resources/style-guide/css/fluig-style-guide-ratingstars.min.css" rel="stylesheet" type="text/css">
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/style-guide/js/fluig-style-guide-filter.min.js"></script>
+		<script src="http://ecp.fluigcloud.com.br/portal/resources/style-guide/js/fluig-style-guide-ratingstars.min.js"></script>
+		<!--<link href='/webdesk/customresources?cid=1&resourceName=temaFormulario/7.css' type='text/css' rel='stylesheet' />-->
+	</head>
+	<body class="fluig-style-guide">
+		<div class="fluig-style-guide container-fluid">
+			<form class="totvs-form grid vertical create-form-components ui-sortable t7" name="createFormComponents" style="padding-left: 10px; padding-right: 10px;">
+				<img src="/portal/resources/images/1/logo_image.png" alt="Logo" id="logo" style="max-height: 50px; max-width: 250px;">
+				<h1 class="title-form-application text-center">Requisitar Treinamento</h1>
+					<!-- FORM CONTROLLERS -->
+					<input type="hidden" name="numProcess" id="numProcess" />
+					<input type="hidden" name="campoDescritor" id="campoDescritor" />
+					<input type="hidden" name="responsavelDepartamento" id="responsavelDepartamento" />
+					<input type="hidden" name="matResponsavelDepartamento" id="matResponsavelDepartamento" />
+
+					<!-- ANALYTICS -->
+					<input type="hidden" name="custom_0" id="custom_0">
+                    <input type="hidden" name="custom_1" id="custom_1">
+                    <input type="hidden" name="custom_2" id="custom_2">
+                    <input type="hidden" name="custom_3" id="custom_3">
+                    <input type="hidden" name="custom_4" id="custom_4">
+                    <input type="hidden" name="custom_5" id="custom_5">
+                    <input type="hidden" name="custom_6" id="custom_6">
+                    <input type="hidden" name="custom_7" id="custom_7">
+                    <input type="hidden" name="custom_8" id="custom_8">
+                    <input type="hidden" name="custom_9" id="custom_9">
+                    <input type="hidden" name="custom_10" id="custom_10">
+                    <input type="hidden" name="custom_11" id="custom_11">
+                    <input type="hidden" name="custom_12" id="custom_12">
+                    <input type="hidden" name="custom_13" id="custom_13">
+                    <input type="hidden" name="custom_14" id="custom_14">
+                    <input type="hidden" name="custom_15" id="custom_15">
+                    <input type="hidden" name="custom_16" id="custom_16">
+                    <input type="hidden" name="custom_17" id="custom_17">
+                    <input type="hidden" name="custom_18" id="custom_18">
+                    <input type="hidden" name="custom_19" id="custom_19">
+                    <input type="hidden" name="custom_20" id="custom_20">
+                    <input type="hidden" name="custom_21" id="custom_21">
+                    <input type="hidden" name="custom_22" id="custom_22">
+                    <input type="hidden" name="custom_23" id="custom_23">
+                    <input type="hidden" name="custom_24" id="custom_24">
+                    <input type="hidden" name="custom_25" id="custom_25">
+                    <input type="hidden" name="custom_26" id="custom_26">
+                    <input type="hidden" name="custom_27" id="custom_27">
+                    <input type="hidden" name="custom_28" id="custom_28">
+                    <input type="hidden" name="custom_29" id="custom_29">
+                    <!--FATOS-->
+                    <input type="hidden" name="fato_0" id="fato_0">
+                    <input type="hidden" name="fato_1" id="fato_1">
+                    <input type="hidden" name="fato_2" id="fato_2">
+                    <input type="hidden" name="fato_3" id="fato_3">
+                    <input type="hidden" name="fato_4" id="fato_4">
+                    <input type="hidden" name="fato_5" id="fato_5">
+                    <input type="hidden" name="fato_6" id="fato_6">
+                    <input type="hidden" name="fato_7" id="fato_7">
+                    <input type="hidden" name="fato_8" id="fato_8">
+                    <input type="hidden" name="fato_9" id="fato_9">
+					<!-- FIM ANALYTICS -->
+
+				<!-- FIM FORMCONTROLERS -->
+
+				<div class="row next-page">
+					<div class="col-md-5 col-xs-12">
+						<div class="form-field" data-type="textbox" data-field-name="areaOrcamento">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="areaOrcamento">Área de Orçamento</label> <strong>*</strong>
+								<!-- 	<select id="areaOrcamento" name="areaOrcamento" class="form-control"></select> -->
+										<div class="input-group" style="width: 100%;">
+											<input name="areaOrcamento" id="areaOrcamento" class="form-control" type="zoom" data-zoom="{
+												'displayKey':'areaOrcamento',
+												'datasetId':'areas_orcamento',
+												'filterValues': 'metadata_active,true',
+												'fields':[
+													{'field':'areaOrcamento', 'label':'Áreas de Orçamento'}
+													]
+												}" >
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-5 col-xs-12">
+						<div class="form-field" data-type="textbox" data-field-name="departamento">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="departamento">Segmento Executivo / Setor</label> <strong>*</strong>
+								<!-- 	<select id="departamento" name="departamento" class="form-control"></select> -->
+										<div class="input-group" style="width: 100%;">
+											<input type="hidden" name="guardaArea" id="guardaArea">
+											<input type="hidden" name="guardaDpto" id="guardaDpto">
+											<input name="departamento" id="departamento" class="form-control" type="zoom" data-zoom="{
+												'displayKey':'segmentoExecutivo',
+												'datasetId':'cadastro_areas_orcamento',
+												'filterValues': 'areaOrcamento,areaOrcamento',
+												'fields':[
+													{'field':'segmentoExecutivo', 'label':'Segmento executivo', 'standard':'true'},
+													{'field':'sigla', 'label':'Sigla'}
+													]
+												}">
+										</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-2 col-xs-12">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="anoVigencia">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="anoVigencia">Ano vigência</label> <strong>*</strong>
+									<input type="text" id="anoVigencia" name="anoVigencia" class="form-control" mask="0000">
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row next-page">
+					<div class="col-md-4 col-xs-12">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="treinamentoSolicitado">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="treinamentoSolicitado">Curso/Treinamento solicitado</label> <strong>*</strong>
+									<input type="text" id="treinamentoSolicitado" name="treinamentoSolicitado" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="entidadeSugerida">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="entidadeSugerida">Entidade sugerida</label> <strong>*</strong>
+									<input type="text" id="entidadeSugerida" name="entidadeSugerida" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="cargaHorariaEstimada">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="cargaHorariaEstimada">Carga horária estimada(Hrs)</label> <strong>*</strong>
+									<input type="text" id="cargaHorariaEstimada" name="cargaHorariaEstimada" class="form-control" mask="0000">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row next-page">
+					<div class="col-md-2 col-xs-4">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="totalParticipantes">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="totalParticipantes">Total de participantes </label> <strong>*</strong>
+									<input type="text" id="totalParticipantes" name="totalParticipantes" class="form-control" mask="0000">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-10 col-xs-8">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="participantes">
+							<div class="form-input">
+								<div class="form-group">
+										<label for="participantes">Participantes (matrícula e nome) 
+												<span class="fluigicon fluigicon-sm bs-docs-popover-hover fluigicon-exclamation-sign"
+												data-toggle="popover" title="" data-content="Preencher este campo no formato Matrícula - Nome. Ao terminar de digitar a matrícula,
+												 pressione hífen(-) para digitar o nome. Ao preencher departamentos, favor preencher no padrão 00000 - Nome do Departamento." data-original-title="Popover title"></span>
+												</label> <strong>*</strong>
+										<div class="participantesContainer">	
+										<input type="text" id="participantes" name="participantes" class="form-control"></div>
+									<textarea name="participantesView" id="participantesView" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder="" readonly></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row next-page">
+					<div class="col-md-12 col-xs-12">
+						<div class="form-field" data-type="radio" data-show-properties="" data-field-name="classificacaoCurso" id="classificacaoCursoContainer">
+							<div class="form-input">
+								<div class="form-group">
+									<label>Classificação do curso</label>&nbsp;<strong>*</strong>
+									<div class="radio-options">
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="classificacaoCurso" id="classificacaoCurso" type="radio" value="Legislação/obrigatório"> Legislação/obrigatório</label>
+										</div>
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="classificacaoCurso" id="classificacaoCurso" type="radio" value="Projeto/implantação"> Projeto/implantação</label>
+										</div>
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="classificacaoCurso" id="classificacaoCurso" type="radio" value="Aprimoramento profissional"> Aprimoramento profissional</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row next-page">
+					<div class="col-md-6 col-xs-12">
+						<div class="form-field" data-type="radio" data-show-properties="" data-field-name="origemVerba" id="origemVerbaContainer">
+							<div class="form-input">
+								<div class="form-group">
+									<label>Origem da verba</label>&nbsp;<strong>*</strong>
+									<div class="radio-options">
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="origemVerba" id="origemVerba" type="radio" value="Solicitação de verba"> Solicitação de verba</label>
+										</div>
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="origemVerba" id="origemVerba" type="radio" value="Canvas"> Canvas</label>
+										</div>
+										<div class="radio-inline">
+											<label class="labelForRadio"><input name="origemVerba" id="origemVerba" type="radio" value="Transposição de verba"> Transposição de verba</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				
+					<div class="col-md-6 col-xs-12 numSolicitacaoVerbaContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="numSolicitacaoVerba">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="numSolicitacaoVerba">Número da solicitação </label> <strong>*</strong>
+									<input type="text" id="numSolicitacaoVerba" name="numSolicitacaoVerba" class="form-control" mask="000000000000">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-xs-12 nomeCanvasContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="nomeCanvas">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="nomeCanvas">Nome do canvas </label> <strong>*</strong>
+									<input type="text" id="nomeCanvas" name="nomeCanvas" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-xs-12 contaContabilContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="contaContabil">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="contaContribuicao">Conta Contábil </label> <strong>*</strong>
+									<input type="text" id="contaContabil" name="contaContabil" class="form-control" mask="0000">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="row next-page">
+					<div class="col-md-12 col-xs-12">
+						<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="justificativa">
+							<div class="form-input">
+								<div class="form-group">
+									<label>Justificativa<strong> *</strong></label>
+									<textarea name="justificativa" id="justificativa" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder=""></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+				<!-- INFORMAÇÕES FINANCEIRAS -->
+
+				<div class="row next-page">
+					<div class="col-md-3 col-xs-6" id="valorEstimadoContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="valorEstimado">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="valorEstimado">Valor estimado(R$)</label> <strong>*</strong>
+									<input type="text" id="valorEstimado" name="valorEstimado" class="form-control" mask="#00.000.000.000.000,00">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6" id="valorUtilizadoContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="valorUtilizado">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="valorUtilizado">Valor real(R$)</label> <strong>*</strong>
+									<input type="text" id="valorUtilizado" name="valorUtilizado" class="form-control" mask="#00.000.000.000.000,00">
+								</div>
+							</div>
+						</div>
+					</div>
+	
+					<div class="col-md-3 col-xs-6" id="SCContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="sc">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="sc">SC</label> <strong>*</strong>
+									<input type="text" id="sc" name="sc" class="form-control" mask="000000000">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 col-xs-6" id="DLContainer">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="dl">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="dl">DL</label> <strong>*</strong>
+									<input type="text" id="dl" name="dl" class="form-control" mask="0000000000">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- CONSIDERAÇÕES -->
+
+				<div class="row considerarContainer">
+					<div class="col-md-12">
+						<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="consideracoes">
+							<div class="form-input">
+								<div class="form-group">
+									<label>Considerações<strong>*</strong></label>
+									<textarea name="consideracoes" id="consideracoes" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control" rows="3" data-size="big" placeholder="Nome da instituição, CNPJ, observações sobre o treinamento"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- APROVAÇÕES -->
+				<div class="aprovacoesContainer">
+					
+					<div class="row next-page aprovacoesGRAContainer">
+						<div class="col-md-12 col-xs-12">
+							<div class="form-field" data-type="radio" data-show-properties="" data-field-name="treinamentoAprovadoGRA" id="treinamentoAprovadoGRAContainer">
+								<div class="form-input">
+									<div class="form-group">
+										<label>Treinamento aprovado?</label>&nbsp;<strong>*</strong>
+										<div class="radio-options">
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoGRA" id="treinamentoAprovadoGRA" type="radio" value="Sim"> Sim</label>
+											</div>
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoGRA" id="treinamentoAprovadoGRA" type="radio" value="Não"> Não</label>
+											</div>
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoGRA" id="treinamentoAprovadoGRA" type="radio" value="Cancelar"> Cancelar</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="row next-page aprovacoesRHContainer">
+						<div class="col-md-12 col-xs-12">
+							<div class="form-field" data-type="radio" data-show-properties="" data-field-name="treinamentoAprovadoRH" id="treinamentoAprovadoRHContainer">
+								<div class="form-input">
+									<div class="form-group">
+										<label>Treinamento aprovado?</label>&nbsp;<strong>*</strong>
+										<div class="radio-options">
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoRH" id="treinamentoAprovadoRH" type="radio" value="Sim"> Sim</label>
+											</div>
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoRH" id="treinamentoAprovadoRH" type="radio" value="Não"> Não</label>
+											</div>
+											<div class="radio-inline">
+												<label class="labelForRadio"><input name="treinamentoAprovadoRH" id="treinamentoAprovadoRH" type="radio" value="Cancelar"> Cancelar</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+					
+				<!-- HISTORICO -->
+				<div class="row obsHistoricoContainer" style="margin-top: 30px;">
+					<div class="col-md-12">
+						<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="obsHistorico">
+							<div class="form-input">
+								<div class="form-group">
+									<label>Observações<strong style="display: none;"> *</strong></label>
+									<textarea name="obsHistorico" id="obsHistorico" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control" rows="3" data-size="big" placeholder=""></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<br><br>
+						<h2>Última atualização</h2>
+						<div class="row">
+							<div class="col-md-12">
+								<textarea class="txthistory"  cols="300" data-size="big" id="ultimaAtualizacao" name="ultimaAtualizacao" onclick="manipulateDOM.expandTextareaHistorico('ultimaAtualizacao')" readonly="readonly" rows="3" style="cursor: pointer" type="textarea"></textarea>
+							</div>
+						</div>
+						<hr><br>
+						<textarea class="txthistory" cols="300" data-size="big" id="historico" name="historico" onclick="manipulateDOM.expandTextareaHistorico('historico')" readonly="readonly" rows="10" style="overflow-y: auto; cursor: pointer; display: none;" type="textarea"></textarea>
+						<button class="btn btn-primary" id="btnhistorico2" name="botaoHistorico2" onclick="manipulateDOM.mostraHistorico();" type="button">
+							Histórico
+						</button>
+						<br><br><br>
+					</div>
+				</div>
+				<!-- FIM HISTORICO -->
+			</form>
+		</div>	
+		<!-- VALIDAÇÕES -->
+		<script type="text/javascript" src="validacao.js"></script>
+		<script type="text/javascript" src="formValidate.js"></script>
+		<!-- MODULES -->
+		<script type="text/javascript" src="src/numbersAndCurrency.js"></script>
+		<script type="text/javascript" src="src/dateFunctions.js"></script>
+		<script type="text/javascript" src="src/manipulateDOM.js"></script>
+		<script type="text/javascript" src="src/lifecycle.js"></script>
+		<!-- APP -->
+		<script type="text/javascript" src="app-refactV2.js"></script> 
+	</body>
+</html>
