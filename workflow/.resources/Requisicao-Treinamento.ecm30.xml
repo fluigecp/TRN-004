@@ -225,8 +225,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>670</positionX>
-      <positionY>283</positionY>
+      <positionX>669</positionX>
+      <positionY>309</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,7 +328,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1050</positionX>
-      <positionY>276</positionY>
+      <positionY>302</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -359,10 +359,10 @@
       <stateName>Finalizar treinamento</stateName>
       <stateDescription>Finalizar treinamento</stateDescription>
       <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
+      <deadlineTime>28800</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
@@ -378,8 +378,108 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>1254</positionX>
+      <positionX>1249</positionX>
       <positionY>470</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId>Horário_Comercial</periodId>
+      <stateType>0</stateType>
+      <bpmnType>80</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>0</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>67</sequence>
+      </processStatePK>
+      <stateName>Iniciar avaliação de reação</stateName>
+      <stateDescription>Iniciar avaliação de reação</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1250</positionX>
+      <positionY>720</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>82</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
+      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
+      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <executionType>1</executionType>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>69</sequence>
+      </processStatePK>
+      <stateName> Tratar erro</stateName>
+      <stateDescription> Tratar erro</stateDescription>
+      <instruction></instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Processos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
+      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1010</positionX>
+      <positionY>947</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -477,7 +577,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>860</positionX>
-      <positionY>300</positionY>
+      <positionY>327</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -493,6 +593,53 @@
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
       <parentSequence>0</parentSequence>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>71</sequence>
+      </processStatePK>
+      <stateName>Intermediário</stateName>
+      <stateDescription>Intermediário</stateDescription>
+      <instruction>Evento intermediário do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>1</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1240</positionX>
+      <positionY>780</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>43</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+      <parentSequence>67</parentSequence>
     </ProcessState>
     <ProcessState>
       <processStatePK>
@@ -534,59 +681,12 @@
       <subProcessId></subProcessId>
       <formFolder>0</formFolder>
       <automatic>true</automatic>
-      <positionX>693</positionX>
+      <positionX>692</positionX>
       <positionY>454</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
       <signalId>0</signalId>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <sequence>47</sequence>
-      </processStatePK>
-      <stateName>Fim</stateName>
-      <stateDescription>Fim</stateDescription>
-      <instruction>Atividade final do processo</instruction>
-      <deadlineTime>0</deadlineTime>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
-      <selectColleague>0</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>0</allowanceAuthorityTime>
-      <frequenceAuthorityTime>1</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1459</positionX>
-      <positionY>487</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>60</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
       <openInstances>0</openInstances>
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
@@ -679,6 +779,53 @@
       <periodId></periodId>
       <stateType>0</stateType>
       <bpmnType>65</bpmnType>
+      <signalId>0</signalId>
+      <counterSign>false</counterSign>
+      <openInstances>0</openInstances>
+      <destinationStates/>
+      <digitalSignature>false</digitalSignature>
+    </ProcessState>
+    <ProcessState>
+      <processStatePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>73</sequence>
+      </processStatePK>
+      <stateName>Fim</stateName>
+      <stateDescription>Fim</stateDescription>
+      <instruction>Atividade final do processo</instruction>
+      <deadlineTime>0</deadlineTime>
+      <joint>false</joint>
+      <agreementPercentage>0</agreementPercentage>
+      <engineAllocationId></engineAllocationId>
+      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <selectColleague>0</selectColleague>
+      <initialState>false</initialState>
+      <notifyAuthorityDelay>true</notifyAuthorityDelay>
+      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
+      <allowanceAuthorityTime>0</allowanceAuthorityTime>
+      <frequenceAuthorityTime>1</frequenceAuthorityTime>
+      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
+      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
+      <transferAttachments>false</transferAttachments>
+      <subProcessId></subProcessId>
+      <formFolder>0</formFolder>
+      <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
+      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
+      <automatic>false</automatic>
+      <positionX>1520</positionX>
+      <positionY>737</positionY>
+      <forecastedEffortType>0</forecastedEffortType>
+      <forecastedEffort>0</forecastedEffort>
+      <notifyManagerFollowUp>false</notifyManagerFollowUp>
+      <notifyManagerDelay>false</notifyManagerDelay>
+      <allowanceManagerTime>0</allowanceManagerTime>
+      <frequenceManagerTime>0</frequenceManagerTime>
+      <inhibitTransfer>false</inhibitTransfer>
+      <periodId></periodId>
+      <stateType>0</stateType>
+      <bpmnType>60</bpmnType>
       <signalId>0</signalId>
       <counterSign>false</counterSign>
       <openInstances>0</openInstances>
@@ -856,22 +1003,6 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>1</version>
-        <linkSequence>48</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>45</initialStateSequence>
-      <finalStateSequence>47</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
         <linkSequence>55</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
@@ -984,7 +1115,71 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>1</version>
-        <linkSequence>64</linkSequence>
+        <linkSequence>68</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>45</initialStateSequence>
+      <finalStateSequence>67</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <linkSequence>70</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>69</initialStateSequence>
+      <finalStateSequence>67</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <linkSequence>72</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>71</initialStateSequence>
+      <finalStateSequence>69</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <linkSequence>74</linkSequence>
+      </processLinkPK>
+      <actionLabel></actionLabel>
+      <returnPermited>false</returnPermited>
+      <initialStateSequence>67</initialStateSequence>
+      <finalStateSequence>73</finalStateSequence>
+      <returnLabel></returnLabel>
+      <name></name>
+      <automaticLink>false</automaticLink>
+      <type>0</type>
+    </ProcessLink>
+    <ProcessLink>
+      <processLinkPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <linkSequence>75</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
@@ -1065,6 +1260,121 @@ function usuario(){&#xd;
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
+        <eventId>servicetask67</eventId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+      </workflowProcessEventPK>
+      <eventDescription>function servicetask67(attempt, message) {
+	try {
+		var numSolicPai = getValue(&apos;WKNumProces&apos;);
+
+		var servico = ServiceManager.getService(&quot;ECMWorkflowEngineService&quot;).getBean();
+		log.warn(&quot;%%%%%% servico : &quot; + servico);
+
+		var locator = servico.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ECMWorkflowEngineServiceService&quot;);
+		log.warn(&quot;%%%%%% locator : &quot; + locator);
+
+		var WorkflowEngineService = locator.getWorkflowEngineServicePort();
+		log.warn(&quot;%%%%%% WorkflowEngineService : &quot; + WorkflowEngineService);
+
+		var username = hAPI.getAdvancedProperty(&quot;loginUserWS&quot;);
+		log.warn(&quot;%%%%%% username : &quot; + username);
+
+		var password = hAPI.getAdvancedProperty(&quot;passwdUserWS&quot;);
+		log.warn(&quot;%%%%%% password : &quot; + password);
+
+		var companyId = parseInt(getValue(&quot;WKCompany&quot;));
+		log.warn(&quot;%%%%%% companyId : &quot; + companyId);
+
+		var processId = &quot;TRN-006&quot;;
+
+		var choosedState = 18;
+
+		var comments = &quot;Solicitação aberta por: Nº &quot; + numSolicPai;
+		log.warn(&quot;%%%%%% comments : &quot; + comments);
+
+		var userId = hAPI.getAdvancedProperty(&quot;matUserWS&quot;);
+		log.warn(&quot;%%%%%% userId : &quot; + userId);
+
+		var completeTask = true;
+		log.warn(&quot;%%%%%% completeTask : &quot; + completeTask);
+
+		var attachments = servico.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ProcessAttachmentDtoArray&quot;);
+		log.warn(&quot;%%%%%% attachments : &quot; + attachments);
+
+		var appointment = servico.instantiate(&quot;com.totvs.technology.ecm.workflow.ws.ProcessTaskAppointmentDtoArray&quot;);
+		log.warn(&quot;%%%%%% appointment : &quot; + appointment);
+
+		var managerMode = false;
+		log.warn(&quot;%%%%%% managerMode : &quot; + managerMode);
+
+		var novaSolic;
+
+		var colleagueIds = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);
+		colleagueIds.getItem().add(&apos;System:Auto&apos;);
+		log.warn(&quot;%%%%%% colleagueIds&quot;);
+
+		var participantesObj = filterParticipantesObj(hAPI.getCardValue(&quot;participantes&quot;));
+		var fieldsAvaliacao = [&quot;nomeParticipante&quot;, &quot;matricula&quot;, &quot;area&quot;, &quot;cursoTreinamento&quot;,
+			&quot;instituicao&quot;, &quot;dataRealizacao&quot;, &quot;cargaHoraria&quot;, &quot;matResponsavelSolic&quot;
+		];
+		for (var i = 0; i &lt; participantesObj.length; i++) {
+			var fieldsRequisicao = [];
+			var currentMat = hAPI.getCardValue(&quot;matResponsavelDepartamento&quot;);
+			if ( searchUserMat( participantesObj[i].matricula ) ) {
+				currentMat = participantesObj[i].matricula;
+			} 
+				fieldsRequisicao.push(participantesObj[i].nome + &quot;&quot;)
+				fieldsRequisicao.push(currentMat + &quot;&quot;)
+				fieldsRequisicao.push(hAPI.getCardValue(&quot;departamento&quot;) + &quot;&quot;)
+				fieldsRequisicao.push(hAPI.getCardValue(&quot;treinamentoSolicitado&quot;) + &quot;&quot;)
+				fieldsRequisicao.push(hAPI.getCardValue(&quot;entidadeSugerida&quot;) + &quot;&quot;)
+				fieldsRequisicao.push(hAPI.getCardValue(&quot;anoVigencia&quot;) + &quot;&quot;)
+				fieldsRequisicao.push(hAPI.getCardValue(&quot;cargaHorariaEstimada&quot;) + &quot;&quot;);
+				fieldsRequisicao.push(currentMat + &quot;&quot;);
+			var cardData = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);
+			log.warn(&quot;%%%%%% cardData&quot;);
+			for (var x = 0; x &lt; fieldsAvaliacao.length; x++) {
+				var objField = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);
+				objField.getItem().add(fieldsAvaliacao[x]);
+				objField.getItem().add(fieldsRequisicao[x]);
+				cardData.getItem().add(objField);
+			}
+			novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
+				completeTask, attachments, cardData, appointment, managerMode);
+		}
+
+
+	} catch (error) {
+		log.error(error);
+		throw error;
+	}
+}
+
+function filterParticipantesObj(str) {
+	var strArray = str.split(&quot;,&quot;);
+	var participantesObj = [];
+	for (var i = 0; i &lt; strArray.length; i++) {
+		participantesObj.push({
+			nome: strArray[i].substring(strArray[i].indexOf(&quot;-&quot;) + 2),
+			matricula: strArray[i].substring(0, strArray[i].indexOf(&quot;-&quot;) - 1)
+		});
+	}
+	return participantesObj;
+}
+
+function searchUserMat(mat) {
+	var c2 = DatasetFactory.createConstraint(&quot;colleaguePK.colleagueId&quot;, mat, mat, ConstraintType.MUST);
+	var dataset = DatasetFactory.getDataset(&quot;colleague&quot;, null, [c2], null);
+	if (dataset.values.length &gt; 0) {
+		return true;
+	}
+	return false;
+}</eventDescription>
+    </WorkflowProcessEvent>
+    <WorkflowProcessEvent>
+      <workflowProcessEventPK>
+        <companyId>1</companyId>
         <eventId>beforeSendData</eventId>
         <processId>TRN-004</processId>
         <version>1</version>
@@ -1119,12 +1429,40 @@ function usuario(){&#xd;
 </eventDescription>
     </WorkflowProcessEvent>
   </list>
-  <list/>
+  <list>
+    <AdvancedProcessProperties>
+      <advancedProcessPropertiesPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <propertyId>loginUserWS</propertyId>
+        <version>2</version>
+      </advancedProcessPropertiesPK>
+      <propertieValue>servico</propertieValue>
+    </AdvancedProcessProperties>
+    <AdvancedProcessProperties>
+      <advancedProcessPropertiesPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <propertyId>matUserWS</propertyId>
+        <version>2</version>
+      </advancedProcessPropertiesPK>
+      <propertieValue>0000</propertieValue>
+    </AdvancedProcessProperties>
+    <AdvancedProcessProperties>
+      <advancedProcessPropertiesPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <propertyId>passwdUserWS</propertyId>
+        <version>2</version>
+      </advancedProcessPropertiesPK>
+      <propertieValue>fcea920f7412b5da7be0cf42b8c93759</propertieValue>
+    </AdvancedProcessProperties>
+  </list>
   <list>
     <SwimLane>
       <color>C0C7CC</color>
       <height>221</height>
-      <width>1461</width>
+      <width>1801</width>
       <positionX>60</positionX>
       <positionY>0</positionY>
       <stateName>Gerente Área</stateName>
@@ -1140,7 +1478,7 @@ function usuario(){&#xd;
     <SwimLane>
       <color>DFDFDF</color>
       <height>190</height>
-      <width>1461</width>
+      <width>1801</width>
       <positionX>60</positionX>
       <positionY>220</positionY>
       <stateName>Usuário Fluig</stateName>
@@ -1156,7 +1494,7 @@ function usuario(){&#xd;
     <SwimLane>
       <color>C0C7CC</color>
       <height>252</height>
-      <width>1461</width>
+      <width>1801</width>
       <positionX>60</positionX>
       <positionY>409</positionY>
       <stateName>RH</stateName>
@@ -1167,6 +1505,38 @@ function usuario(){&#xd;
         <processId>TRN-004</processId>
         <version>1</version>
         <sequence>3</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>DFDFDF</color>
+      <height>190</height>
+      <width>1801</width>
+      <positionX>60</positionX>
+      <positionY>660</positionY>
+      <stateName>Fluig</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>4</sequence>
+      </swimLanePK>
+    </SwimLane>
+    <SwimLane>
+      <color>C0C7CC</color>
+      <height>242</height>
+      <width>1801</width>
+      <positionX>60</positionX>
+      <positionY>849</positionY>
+      <stateName>Processos</stateName>
+      <type>2</type>
+      <parentSequence>0</parentSequence>
+      <swimLanePK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>1</version>
+        <sequence>5</sequence>
       </swimLanePK>
     </SwimLane>
   </list>
@@ -1203,8 +1573,8 @@ function usuario(){&#xd;
         <linkSequence>46</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1307</positionX>
-      <positionY>318</positionY>
+      <positionX>1301</positionX>
+      <positionY>343</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1217,20 +1587,82 @@ function usuario(){&#xd;
       <positionX>723</positionX>
       <positionY>154</positionY>
     </ProcessLinkBend>
-  </list>
-  <list/>
-  <list/>
-  <list>
-    <ProcessFormField>
-      <processFormFieldPK>
+    <ProcessLinkBend>
+      <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <fieldId>campoDescritor</fieldId>
-      </processFormFieldPK>
-      <fieldDescription>campoDescritor</fieldDescription>
-      <slotId>1</slotId>
-    </ProcessFormField>
+        <version>2</version>
+        <linkSequence>70</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1062</positionX>
+      <positionY>755</positionY>
+    </ProcessLinkBend>
+    <ProcessLinkBend>
+      <processLinkBendPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>2</version>
+        <linkSequence>72</linkSequence>
+        <bendSequence>1</bendSequence>
+      </processLinkBendPK>
+      <positionX>1254</positionX>
+      <positionY>975</positionY>
+    </ProcessLinkBend>
   </list>
   <list/>
+  <list>
+    <ExtendedPropertyField>
+      <extendedPropertyFieldPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>2</version>
+        <stateSequence>0</stateSequence>
+        <propertyName>loginUserWS</propertyName>
+      </extendedPropertyFieldPK>
+      <propertyType>0</propertyType>
+      <propertyDescription>loginUserWS</propertyDescription>
+      <propertyValue>servico</propertyValue>
+      <isDefaultProperty>false</isDefaultProperty>
+    </ExtendedPropertyField>
+    <ExtendedPropertyField>
+      <extendedPropertyFieldPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>2</version>
+        <stateSequence>0</stateSequence>
+        <propertyName>matUserWS</propertyName>
+      </extendedPropertyFieldPK>
+      <propertyType>0</propertyType>
+      <propertyDescription>matUserWS</propertyDescription>
+      <propertyValue>0000</propertyValue>
+      <isDefaultProperty>false</isDefaultProperty>
+    </ExtendedPropertyField>
+    <ExtendedPropertyField>
+      <extendedPropertyFieldPK>
+        <companyId>1</companyId>
+        <processId>TRN-004</processId>
+        <version>2</version>
+        <stateSequence>0</stateSequence>
+        <propertyName>passwdUserWS</propertyName>
+      </extendedPropertyFieldPK>
+      <propertyType>0</propertyType>
+      <propertyDescription>passwdUserWS</propertyDescription>
+      <propertyValue>fcea920f7412b5da7be0cf42b8c93759</propertyValue>
+      <isDefaultProperty>false</isDefaultProperty>
+    </ExtendedPropertyField>
+  </list>
+  <list/>
+  <list>
+    <ProcessStateService>
+      <companyId>1</companyId>
+      <processId>TRN-004</processId>
+      <version>1</version>
+      <sequence>67</sequence>
+      <attempts>0</attempts>
+      <sucessFullMessage></sucessFullMessage>
+      <serviceName>ECMWorkflowEngineService</serviceName>
+    </ProcessStateService>
+  </list>
   <list/>
 </list>
