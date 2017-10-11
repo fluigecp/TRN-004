@@ -26,7 +26,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Requisitar Treinamento</processId>
-      <version>2</version>
+      <version>13</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -839,7 +839,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Sim&quot;</condition>
@@ -850,7 +850,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Não&quot;</condition>
@@ -861,7 +861,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Cancelar&quot;</condition>
@@ -872,7 +872,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Sim&quot;</condition>
@@ -883,7 +883,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Não&quot;</condition>
@@ -894,7 +894,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>2</version>
+        <version>13</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Cancelar&quot;</condition>
@@ -1435,7 +1435,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>loginUserWS</propertyId>
-        <version>2</version>
+        <version>13</version>
       </advancedProcessPropertiesPK>
       <propertieValue>servico</propertieValue>
     </AdvancedProcessProperties>
@@ -1444,7 +1444,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>matUserWS</propertyId>
-        <version>2</version>
+        <version>13</version>
       </advancedProcessPropertiesPK>
       <propertieValue>0000</propertieValue>
     </AdvancedProcessProperties>
@@ -1453,7 +1453,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>passwdUserWS</propertyId>
-        <version>2</version>
+        <version>13</version>
       </advancedProcessPropertiesPK>
       <propertieValue>fcea920f7412b5da7be0cf42b8c93759</propertieValue>
     </AdvancedProcessProperties>
@@ -1547,7 +1547,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>12</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1558,7 +1558,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1569,7 +1569,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>46</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1580,7 +1580,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>56</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1591,7 +1591,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>70</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1602,7 +1602,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <linkSequence>72</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1616,7 +1616,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <stateSequence>0</stateSequence>
         <propertyName>loginUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -1629,7 +1629,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <stateSequence>0</stateSequence>
         <propertyName>matUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -1642,7 +1642,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>2</version>
+        <version>13</version>
         <stateSequence>0</stateSequence>
         <propertyName>passwdUserWS</propertyName>
       </extendedPropertyFieldPK>
