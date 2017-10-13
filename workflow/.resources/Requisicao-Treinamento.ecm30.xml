@@ -1333,23 +1333,16 @@ function usuario(){&#xd;
 				fieldsRequisicao.push(hAPI.getCardValue(&quot;cargaHorariaEstimada&quot;) + &quot;&quot;);
 				fieldsRequisicao.push(currentMat + &quot;&quot;);
 				fieldsRequisicao.push(numSolicPai + &quot;&quot;);
-				log.warn(&quot;%%%% fieldsRequisicao: &quot; + fieldsRequisicao);
-				log.warn(&quot;%%%% fieldsAvaliacao: &quot; + fieldsAvaliacao);
 			var cardData = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);
-			log.warn(&quot;%%%%%% cardData&quot;);
 			for (var x = 0; x &lt; fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);
 				objField.getItem().add(fieldsAvaliacao[x]);
-				log.warn(&quot;%%% Label added: &quot; + fieldsAvaliacao[x] );
 				objField.getItem().add(fieldsRequisicao[x]);
-				log.warn(&quot;%%% Value added: &quot; + fieldsRequisicao[x] );
 				cardData.getItem().add(objField);
-				log.warn(&quot;%%%%%% cardData: &quot; + cardData);
 			}
 			novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
 				completeTask, attachments, cardData, appointment, managerMode);
 		}
-
 
 	} catch (error) {
 		log.error(error);
