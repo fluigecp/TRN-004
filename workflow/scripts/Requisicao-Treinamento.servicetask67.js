@@ -58,22 +58,27 @@ function servicetask67(attempt, message) {
 			if ( searchUserMat( participantesObj[i].matricula ) ) {
 				currentMat = participantesObj[i].matricula;
 			} 
-				fieldsRequisicao.push(participantesObj[i].nome + "")
-				fieldsRequisicao.push(currentMat + "")
-				fieldsRequisicao.push(hAPI.getCardValue("departamento") + "")
-				fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "")
-				fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "")
-				fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "")
+				fieldsRequisicao.push(participantesObj[i].nome + "");
+				fieldsRequisicao.push(currentMat + "");
+				fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
 				fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
 				fieldsRequisicao.push(currentMat + "");
-				fieldsRequisicao.push(numSolicPai);
+				fieldsRequisicao.push(numSolicPai + "");
+				log.warn("%%%% fieldsRequisicao: " + fieldsRequisicao);
+				log.warn("%%%% fieldsAvaliacao: " + fieldsAvaliacao);
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			log.warn("%%%%%% cardData");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
 				objField.getItem().add(fieldsAvaliacao[x]);
+				log.warn("%%% Label added: " + fieldsAvaliacao[x] );
 				objField.getItem().add(fieldsRequisicao[x]);
+				log.warn("%%% Value added: " + fieldsRequisicao[x] );
 				cardData.getItem().add(objField);
+				log.warn("%%%%%% cardData: " + cardData);
 			}
 			novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
 				completeTask, attachments, cardData, appointment, managerMode);
