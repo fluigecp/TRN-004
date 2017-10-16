@@ -2,6 +2,10 @@ function servicetask67(attempt, message) {
 	try {
 		var numSolicPai = getValue('WKNumProces');
 
+		//var documentId = ( hAPI.getCardData( getValue( "WKNumProcess" ) ) ).get( "documentid" );
+		var documentId = hAPI.getCardValue( "documentid" );
+		log.warn("%%%%%% documentId : " + documentId);
+
 		var servico = ServiceManager.getService("ECMWorkflowEngineService").getBean();
 		log.warn("%%%%%% servico : " + servico);
 
@@ -55,18 +59,18 @@ function servicetask67(attempt, message) {
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
 			var currentMat = hAPI.getCardValue("matResponsavelDepartamento");
-			if ( searchUserMat( participantesObj[i].matricula ) ) {
+			if (searchUserMat(participantesObj[i].matricula)) {
 				currentMat = participantesObj[i].matricula;
-			} 
-				fieldsRequisicao.push(participantesObj[i].nome + "");
-				fieldsRequisicao.push(currentMat + "");
-				fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
-				fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
-				fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
-				fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
-				fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
-				fieldsRequisicao.push(currentMat + "");
-				fieldsRequisicao.push(numSolicPai + "");
+			}
+			fieldsRequisicao.push(participantesObj[i].nome + "");
+			fieldsRequisicao.push(currentMat + "");
+			fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
+			fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
+			fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
+			fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
+			fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
+			fieldsRequisicao.push(currentMat + "");
+			fieldsRequisicao.push(numSolicPai + "");
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
@@ -84,6 +88,10 @@ function servicetask67(attempt, message) {
 	}
 }
 
+/**
+ * retorna um array de objetos com nome e matricula de todos os participantes.
+ * @param {string} str - Parâmetro string com o nome de todos os participantes, separados com virgula 
+ */
 function filterParticipantesObj(str) {
 	var strArray = str.split(",");
 	var participantesObj = [];
@@ -95,7 +103,10 @@ function filterParticipantesObj(str) {
 	}
 	return participantesObj;
 }
-
+/**
+ * Verifica se um usuário existe na base de usuários do Fluig
+ * @param {string} mat - Matrícula do usuário
+ */
 function searchUserMat(mat) {
 	var c2 = DatasetFactory.createConstraint("colleaguePK.colleagueId", mat, mat, ConstraintType.MUST);
 	var dataset = DatasetFactory.getDataset("colleague", null, [c2], null);
