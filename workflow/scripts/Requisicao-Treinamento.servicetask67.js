@@ -54,7 +54,7 @@ function servicetask67(attempt, message) {
 
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
-			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento"
+			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento","classificacaoCurso"
 		];
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
@@ -62,6 +62,18 @@ function servicetask67(attempt, message) {
 			if (searchUserMat(participantesObj[i].matricula)) {
 				currentMat = participantesObj[i].matricula;
 			}
+			var classificacao = hAPI.getCardValue("classificacaoCurso");
+			
+			if ( classificacao == "legislacao_obrigatorio" ){ 
+				classificacao = "Legislação/Obrigatório";
+			}
+			if ( classificacao == "projeto_implantacao" ){
+				 classificacao = "Projeto/implantação";
+			}
+			if( classificacao == "aprimoramento_profissional" ){
+				 classificacao = "Aprimoramento profissional";
+			}
+			log.warn("%%%%%% classificacao: "+classificacao);
 			fieldsRequisicao.push(participantesObj[i].nome + "");
 			fieldsRequisicao.push(currentMat + "");
 			fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
@@ -71,6 +83,7 @@ function servicetask67(attempt, message) {
 			fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
 			fieldsRequisicao.push(currentMat + "");
 			fieldsRequisicao.push(numSolicPai + "");
+			fieldsRequisicao.push(classificacao + "");
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
