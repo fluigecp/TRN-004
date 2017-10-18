@@ -54,8 +54,8 @@ function servicetask67(attempt, message) {
 
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
-			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento","classificacaoCurso"
-		];
+			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento",
+			"classificacaoCurso", "campoDescritor"];
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
 			var currentMat = hAPI.getCardValue("matResponsavelDepartamento");
@@ -84,6 +84,7 @@ function servicetask67(attempt, message) {
 			fieldsRequisicao.push(currentMat + "");
 			fieldsRequisicao.push(numSolicPai + "");
 			fieldsRequisicao.push(classificacao + "");
+			fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
