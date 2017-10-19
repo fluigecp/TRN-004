@@ -55,10 +55,11 @@ function servicetask67(attempt, message) {
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
 			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento",
-			"classificacaoCurso", "campoDescritor"];
+			"classificacaoCurso", "campoDescritor", "matResponsavelArea"];
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
-			var currentMat = hAPI.getCardValue("matResponsavelDepartamento");
+			var responsavelArea = hAPI.getCardValue("matResponsavelDepartamento");
+			var currentMat = responsavelArea;
 			if (searchUserMat(participantesObj[i].matricula)) {
 				currentMat = participantesObj[i].matricula;
 			}
@@ -85,6 +86,7 @@ function servicetask67(attempt, message) {
 			fieldsRequisicao.push(numSolicPai + "");
 			fieldsRequisicao.push(classificacao + "");
 			fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
+			fieldsRequisicao.push(responsavelArea + "");
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");

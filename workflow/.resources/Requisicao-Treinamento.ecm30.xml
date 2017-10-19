@@ -158,7 +158,7 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
@@ -260,7 +260,7 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
@@ -462,7 +462,7 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationId>Pool Grupo</engineAllocationId>
       <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Processos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
@@ -1321,10 +1321,11 @@ function usuario(){&#xd;
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue(&quot;participantes&quot;));
 		var fieldsAvaliacao = [&quot;nomeParticipante&quot;, &quot;matricula&quot;, &quot;area&quot;, &quot;cursoTreinamento&quot;,
 			&quot;instituicao&quot;, &quot;dataRealizacao&quot;, &quot;cargaHoraria&quot;, &quot;matResponsavelSolic&quot;, &quot;numSolicTreinamento&quot;,
-			&quot;classificacaoCurso&quot;, &quot;campoDescritor&quot;];
+			&quot;classificacaoCurso&quot;, &quot;campoDescritor&quot;, &quot;matResponsavelArea&quot;];
 		for (var i = 0; i &lt; participantesObj.length; i++) {
 			var fieldsRequisicao = [];
-			var currentMat = hAPI.getCardValue(&quot;matResponsavelDepartamento&quot;);
+			var responsavelArea = hAPI.getCardValue(&quot;matResponsavelDepartamento&quot;);
+			var currentMat = responsavelArea;
 			if (searchUserMat(participantesObj[i].matricula)) {
 				currentMat = participantesObj[i].matricula;
 			}
@@ -1351,6 +1352,7 @@ function usuario(){&#xd;
 			fieldsRequisicao.push(numSolicPai + &quot;&quot;);
 			fieldsRequisicao.push(classificacao + &quot;&quot;);
 			fieldsRequisicao.push(participantesObj[i].nome + &quot; - &quot; + hAPI.getCardValue(&quot;treinamentoSolicitado&quot;) + &quot;&quot;);
+			fieldsRequisicao.push(responsavelArea + &quot;&quot;);
 			var cardData = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);
 			for (var x = 0; x &lt; fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);
