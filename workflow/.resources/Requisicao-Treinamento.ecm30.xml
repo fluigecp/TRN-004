@@ -74,7 +74,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>120</positionX>
-      <positionY>327</positionY>
+      <positionY>317</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -124,7 +124,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>284</positionX>
-      <positionY>120</positionY>
+      <positionY>110</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -175,7 +175,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>485</positionX>
-      <positionY>470</positionY>
+      <positionY>460</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -226,7 +226,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>669</positionX>
-      <positionY>309</positionY>
+      <positionY>299</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -277,7 +277,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>947</positionX>
-      <positionY>477</positionY>
+      <positionY>467</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,7 +328,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1050</positionX>
-      <positionY>302</positionY>
+      <positionY>292</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -379,7 +379,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1249</positionX>
-      <positionY>470</positionY>
+      <positionY>460</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -428,7 +428,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1250</positionX>
-      <positionY>720</positionY>
+      <positionY>710</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -479,7 +479,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1010</positionX>
-      <positionY>947</positionY>
+      <positionY>937</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -530,7 +530,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>320</positionX>
-      <positionY>40</positionY>
+      <positionY>30</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -577,7 +577,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>860</positionX>
-      <positionY>327</positionY>
+      <positionY>317</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -624,7 +624,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1240</positionX>
-      <positionY>780</positionY>
+      <positionY>770</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -657,7 +657,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>507</positionX>
-      <positionY>104</positionY>
+      <positionY>94</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -682,7 +682,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>692</positionX>
-      <positionY>454</positionY>
+      <positionY>444</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -721,7 +721,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>520</positionX>
-      <positionY>20</positionY>
+      <positionY>10</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -768,7 +768,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>705</positionX>
-      <positionY>600</positionY>
+      <positionY>590</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -815,7 +815,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1520</positionX>
-      <positionY>737</positionY>
+      <positionY>727</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1342,7 +1342,7 @@ function usuario(){&#xd;
 			}
 			log.warn(&quot;%%%%%% classificacao: &quot;+classificacao);
 			fieldsRequisicao.push(participantesObj[i].nome + &quot;&quot;);
-			fieldsRequisicao.push(currentMat + &quot;&quot;);
+			fieldsRequisicao.push(participantesObj[i].matricula + &quot;&quot;);
 			fieldsRequisicao.push(hAPI.getCardValue(&quot;departamento&quot;) + &quot;&quot;);
 			fieldsRequisicao.push(hAPI.getCardValue(&quot;treinamentoSolicitado&quot;) + &quot;&quot;);
 			fieldsRequisicao.push(hAPI.getCardValue(&quot;entidadeSugerida&quot;) + &quot;&quot;);
@@ -1488,7 +1488,7 @@ function searchUserMat(mat) {
   <list>
     <SwimLane>
       <color>C0C7CC</color>
-      <height>221</height>
+      <height>211</height>
       <width>1801</width>
       <positionX>60</positionX>
       <positionY>0</positionY>
@@ -1507,7 +1507,7 @@ function searchUserMat(mat) {
       <height>190</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>220</positionY>
+      <positionY>210</positionY>
       <stateName>Usuário Fluig</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1523,7 +1523,7 @@ function searchUserMat(mat) {
       <height>252</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>409</positionY>
+      <positionY>399</positionY>
       <stateName>RH</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1539,7 +1539,7 @@ function searchUserMat(mat) {
       <height>190</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>660</positionY>
+      <positionY>650</positionY>
       <stateName>Fluig</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1555,7 +1555,7 @@ function searchUserMat(mat) {
       <height>242</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>849</positionY>
+      <positionY>839</positionY>
       <stateName>Processos</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1579,7 +1579,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>137</positionX>
-      <positionY>154</positionY>
+      <positionY>144</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1590,7 +1590,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1102</positionX>
-      <positionY>504</positionY>
+      <positionY>494</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1601,7 +1601,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1301</positionX>
-      <positionY>343</positionY>
+      <positionY>333</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1612,7 +1612,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>723</positionX>
-      <positionY>154</positionY>
+      <positionY>144</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1623,7 +1623,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1062</positionX>
-      <positionY>755</positionY>
+      <positionY>745</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1634,7 +1634,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1254</positionX>
-      <positionY>975</positionY>
+      <positionY>965</positionY>
     </ProcessLinkBend>
   </list>
   <list/>

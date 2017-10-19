@@ -76,7 +76,7 @@ function servicetask67(attempt, message) {
 			}
 			log.warn("%%%%%% classificacao: "+classificacao);
 			fieldsRequisicao.push(participantesObj[i].nome + "");
-			fieldsRequisicao.push(currentMat + "");
+			fieldsRequisicao.push(participantesObj[i].matricula + "");
 			fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
 			fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
 			fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
