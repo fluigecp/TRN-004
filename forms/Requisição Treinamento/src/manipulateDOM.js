@@ -111,6 +111,14 @@ var manipulateDOM = (function () {
                     zoomFields.cleanAllFieldsRelatedArea();
                 });
             }
+
+            if (selectedItem.inputName == 'participanteFluig') {
+                var participantes = FLUIGC.autocomplete("#participantes");
+                var thisField = FLUIGC.autocomplete("#"+selectedItem.inputName);
+                var tagData = selectedItem.colleagueId + " - " + selectedItem.colleagueName;
+                participantes.add(tagData);
+                thisField.removeAll();
+            }
         },
         /**
          * @description Limpa todos os campos de controle e seta o filtro do campo zoom de departamentos

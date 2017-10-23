@@ -58,6 +58,8 @@ function displayFields(form,customHTML) {
 		} else {
 			ocultaClasse("participantesContainer");
 		}
+	} else {
+		ocultaClasse("participanteFluigContainer");
 	}
 	
 	if (activity == 5) {

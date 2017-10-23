@@ -11,6 +11,7 @@ function enableFields(form) {
     if ( activity == 5 || activity == 15 || activity == 37 || activity == 41 || activity == 43 || activity == 45 ) {
         form.setEnabled('areaOrcamento',false, true);
         form.setEnabled('anoVigencia',false,true);
+        form.setEnabled('participanteFluig',false,true);
         form.setEnabled('departamento',false, true);
         form.setEnabled('treinamentoSolicitado',false, true);
         form.setEnabled('entidadeSugerida',false, true);

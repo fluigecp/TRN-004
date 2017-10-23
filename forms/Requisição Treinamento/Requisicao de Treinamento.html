@@ -137,7 +137,7 @@
 				</div>
 
 				<div class="row next-page">
-					<div class="col-md-4 col-xs-12">
+					<div class="col-md-3 col-xs-12">
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="treinamentoSolicitado">
 							<div class="form-input">
 								<div class="form-group">
@@ -147,7 +147,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-12">
+					<div class="col-md-3 col-xs-12">
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="entidadeSugerida">
 							<div class="form-input">
 								<div class="form-group">
@@ -157,7 +157,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="col-md-4 col-xs-12">
+					<div class="col-md-3 col-xs-12">
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="cargaHorariaEstimada">
 							<div class="form-input">
 								<div class="form-group">
@@ -167,10 +167,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="row next-page">
-					<div class="col-md-2 col-xs-4">
+					<div class="col-md-3 col-xs-12">
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="totalParticipantes">
 							<div class="form-input">
 								<div class="form-group">
@@ -180,8 +177,34 @@
 							</div>
 						</div>
 					</div>
+				</div>
 
-					<div class="col-md-10 col-xs-8">
+				<div class="row next-page participanteFluigContainer">
+ 					<div class="col-md-12 col-xs-12">
+						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="participantes">
+							<div class="form-input">
+								<div class="form-group">
+									<label for="participantes">Participante possui cadastro no fluig? Selecione abaixo:
+											<span class="fluigicon fluigicon-sm bs-docs-popover-hover fluigicon-exclamation-sign"
+											data-toggle="popover" title="" data-content="Se caso o participante do treinamento possuir cadastro no Fluig, ele pode ser localizado de forma mais prática por este campo." data-original-title="Popover title"></span>
+											</label> <strong>*</strong>
+								
+											<input name="participanteFluig" id="participanteFluig" class="form-control" type="zoom" data-zoom="{
+												'displayKey':'colleagueName',
+												'datasetId':'colleague',
+												'fields':[
+													{'field':'colleagueId', 'label':'Matrícula', 'standard':'true'},
+													{'field':'colleagueName', 'label':'Nome'}
+													]
+											}">
+								</div>
+							</div>
+						</div>
+					</div> 
+				</div>
+
+				<div class="row next-page">
+					<div class="col-md-12 col-xs-12">
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="participantes">
 							<div class="form-input">
 								<div class="form-group">
@@ -196,8 +219,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
-
+					</div> 
 				</div>
 
 				<div class="row next-page">

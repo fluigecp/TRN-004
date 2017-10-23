@@ -26,7 +26,7 @@ function servicetask67(attempt, message) {
 
 		var processId = "TRN-006";
 
-		var choosedState = 18;
+		var choosedState = 29;
 
 		var comments = "Solicitação aberta por: Nº " + numSolicPai;
 		log.warn("%%%%%% comments : " + comments);
@@ -55,7 +55,7 @@ function servicetask67(attempt, message) {
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
 			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento",
-			"classificacaoCurso", "campoDescritor", "matResponsavelArea"];
+			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica"];
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
 			var responsavelArea = hAPI.getCardValue("matResponsavelDepartamento");
@@ -87,6 +87,7 @@ function servicetask67(attempt, message) {
 			fieldsRequisicao.push(classificacao + "");
 			fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
 			fieldsRequisicao.push(responsavelArea + "");
+			fieldsRequisicao.push("Sim");
 			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 			for (var x = 0; x < fieldsAvaliacao.length; x++) {
 				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
