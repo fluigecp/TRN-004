@@ -118,6 +118,7 @@ var manipulateDOM = (function () {
                 var tagData = selectedItem.colleagueId + " - " + selectedItem.colleagueName;
                 participantes.add(tagData);
                 thisField.removeAll();
+                thisField.destroy();
             }
         },
         /**
