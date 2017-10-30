@@ -54,7 +54,7 @@ function servicetask67(attempt, message) {
 
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
-			"instituicao", "dataRealizacao", "cargaHoraria", "matResponsavelSolic", "numSolicTreinamento",
+			"instituicao", "dataRealizacao", "cargaHoraria", "avaliadorMat", "numSolicTreinamento",
 			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica"];
 		for (var i = 0; i < participantesObj.length; i++) {
 			var fieldsRequisicao = [];
