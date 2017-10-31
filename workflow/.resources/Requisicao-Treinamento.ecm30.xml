@@ -57,8 +57,8 @@
       <deadlineTime>0</deadlineTime>
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
+      <engineAllocationId>Grupo</engineAllocationId>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;WK_TRN-004_Inicial&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>true</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -74,7 +74,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>120</positionX>
-      <positionY>317</positionY>
+      <positionY>307</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -124,7 +124,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>284</positionX>
-      <positionY>110</positionY>
+      <positionY>90</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -159,7 +159,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Pool Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;WK_TRN-004_Aprovar_Treinamento&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -174,8 +174,8 @@
       <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>485</positionX>
-      <positionY>460</positionY>
+      <positionX>484</positionX>
+      <positionY>510</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -226,7 +226,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>669</positionX>
-      <positionY>299</positionY>
+      <positionY>290</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -261,7 +261,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Pool Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;WK_TRN-004_Considerar&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -277,7 +277,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>947</positionX>
-      <positionY>467</positionY>
+      <positionY>517</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -328,7 +328,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1050</positionX>
-      <positionY>292</positionY>
+      <positionY>283</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -363,7 +363,7 @@
       <joint>false</joint>
       <agreementPercentage>0</agreementPercentage>
       <engineAllocationId>Pool Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;SGQ_Recursos_Humanos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
+      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;WK_TRN-004_Finalizar_Treinamento&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
       <selectColleague>0</selectColleague>
       <initialState>false</initialState>
       <notifyAuthorityDelay>true</notifyAuthorityDelay>
@@ -379,7 +379,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1249</positionX>
-      <positionY>460</positionY>
+      <positionY>510</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -428,7 +428,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1250</positionX>
-      <positionY>710</positionY>
+      <positionY>730</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -479,7 +479,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1010</positionX>
-      <positionY>937</positionY>
+      <positionY>957</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -530,7 +530,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>320</positionX>
-      <positionY>30</positionY>
+      <positionY>10</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -577,7 +577,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>860</positionX>
-      <positionY>317</positionY>
+      <positionY>307</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -624,7 +624,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1240</positionX>
-      <positionY>770</positionY>
+      <positionY>790</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -657,7 +657,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>507</positionX>
-      <positionY>94</positionY>
+      <positionY>74</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -682,7 +682,7 @@
       <formFolder>0</formFolder>
       <automatic>true</automatic>
       <positionX>692</positionX>
-      <positionY>444</positionY>
+      <positionY>494</positionY>
       <inhibitTransfer>false</inhibitTransfer>
       <stateType>1</stateType>
       <bpmnType>120</bpmnType>
@@ -767,8 +767,8 @@
       <notifyAuthorityFollowUp>false</notifyAuthorityFollowUp>
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
-      <positionX>705</positionX>
-      <positionY>590</positionY>
+      <positionX>704</positionX>
+      <positionY>630</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -815,7 +815,7 @@
       <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
       <automatic>false</automatic>
       <positionX>1520</positionX>
-      <positionY>727</positionY>
+      <positionY>747</positionY>
       <forecastedEffortType>0</forecastedEffortType>
       <forecastedEffort>0</forecastedEffort>
       <notifyManagerFollowUp>false</notifyManagerFollowUp>
@@ -1489,7 +1489,7 @@ function searchUserMat(mat) {
   <list>
     <SwimLane>
       <color>C0C7CC</color>
-      <height>211</height>
+      <height>231</height>
       <width>1801</width>
       <positionX>60</positionX>
       <positionY>0</positionY>
@@ -1508,7 +1508,7 @@ function searchUserMat(mat) {
       <height>190</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>210</positionY>
+      <positionY>230</positionY>
       <stateName>Usuário Fluig</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1524,7 +1524,7 @@ function searchUserMat(mat) {
       <height>252</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>399</positionY>
+      <positionY>419</positionY>
       <stateName>RH</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1540,7 +1540,7 @@ function searchUserMat(mat) {
       <height>190</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>650</positionY>
+      <positionY>670</positionY>
       <stateName>Fluig</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1556,7 +1556,7 @@ function searchUserMat(mat) {
       <height>242</height>
       <width>1801</width>
       <positionX>60</positionX>
-      <positionY>839</positionY>
+      <positionY>859</positionY>
       <stateName>Processos</stateName>
       <type>2</type>
       <parentSequence>0</parentSequence>
@@ -1580,7 +1580,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>137</positionX>
-      <positionY>144</positionY>
+      <positionY>124</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1591,7 +1591,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1102</positionX>
-      <positionY>494</positionY>
+      <positionY>544</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1602,7 +1602,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1301</positionX>
-      <positionY>333</positionY>
+      <positionY>325</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1612,8 +1612,8 @@ function searchUserMat(mat) {
         <linkSequence>56</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>723</positionX>
-      <positionY>144</positionY>
+      <positionX>722</positionX>
+      <positionY>124</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1624,7 +1624,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1062</positionX>
-      <positionY>745</positionY>
+      <positionY>765</positionY>
     </ProcessLinkBend>
     <ProcessLinkBend>
       <processLinkBendPK>
@@ -1635,7 +1635,7 @@ function searchUserMat(mat) {
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
       <positionX>1254</positionX>
-      <positionY>965</positionY>
+      <positionY>985</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
