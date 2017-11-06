@@ -56,48 +56,72 @@ function servicetask67(attempt, message) {
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
 			"instituicao", "dataRealizacao", "cargaHoraria", "avaliadorMat", "numSolicTreinamento",
 			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica"];
-		for (var i = 0; i < participantesObj.length; i++) {
-			var fieldsRequisicao = [];
-			var responsavelArea = hAPI.getCardValue("matResponsavelDepartamento");
-			var currentMat = responsavelArea;
-			if (searchUserMat(participantesObj[i].matricula)) {
-				currentMat = participantesObj[i].matricula;
+
+		/* Checa se existem departamento entre os participantes,
+		 	caso sim, abre solitações em branco a serem preenchidas. */
+		if ( checkIfHasDepartamento(participantesObj) ) {
+			var fieldsAvaliacaoWithDepartamento = ["area", "cursoTreinamento", "instituicao", "dataRealizacao", "cargaHoraria", 
+													"numSolicTreinamento", "classificacaoCurso", 
+													 "matResponsavelArea", "aberturaAutomatica"];
+			var fieldsRequisicaoWithDepartamento = [];
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("departamento") + "" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("treinamentoSolicitado") + "" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("entidadeSugerida") + "" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("anoVigencia") + "" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("cargaHorariaEstimada") + "" );
+			fieldsRequisicaoWithDepartamento.push( numSolicPai + "" );
+			fieldsRequisicaoWithDepartamento.push( validateClassificacao( hAPI.getCardValue("classificacaoCurso") ) );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("matResponsavelDepartamento") + "" );
+			fieldsRequisicaoWithDepartamento.push( "Sim" );
+			var qtdeParticipantes = parseInt( hAPI.getCardValue("totalParticipantes") );
+			for (var y = 0; y < qtdeParticipantes; y++) {
+				var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
+				for (var j = 0; j < fieldsAvaliacaoWithDepartamento.length; j++) {
+					var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
+					objField.getItem().add(fieldsAvaliacaoWithDepartamento[j]);
+					objField.getItem().add(fieldsRequisicaoWithDepartamento[j]);
+					cardData.getItem().add(objField);
+				}
+				novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
+					completeTask, attachments, cardData, appointment, managerMode);
 			}
-			var classificacao = hAPI.getCardValue("classificacaoCurso");
-			
-			if ( classificacao == "legislacao_obrigatorio" ){ 
-				classificacao = "Legislação/Obrigatório";
+		} else {
+
+			for (var i = 0; i < participantesObj.length; i++) {
+				var fieldsRequisicao = [];
+				var responsavelArea = hAPI.getCardValue("matResponsavelDepartamento");
+				var currentMat = responsavelArea;
+				if (searchUserMat(participantesObj[i].matricula)) {
+					currentMat = participantesObj[i].matricula;
+				}
+				var classificacao = validateClassificacao( hAPI.getCardValue("classificacaoCurso") );
+				
+				log.warn("%%%%%% classificacao: "+classificacao);
+				fieldsRequisicao.push(participantesObj[i].nome + "");
+				fieldsRequisicao.push(participantesObj[i].matricula + "");
+				fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
+				fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
+				fieldsRequisicao.push(currentMat + "");
+				fieldsRequisicao.push(numSolicPai + "");
+				fieldsRequisicao.push(classificacao + "");
+				fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
+				fieldsRequisicao.push(responsavelArea + "");
+				fieldsRequisicao.push("Sim");
+				var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
+				for (var x = 0; x < fieldsAvaliacao.length; x++) {
+					var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
+					objField.getItem().add(fieldsAvaliacao[x]);
+					objField.getItem().add(fieldsRequisicao[x]);
+					cardData.getItem().add(objField);
+				}
+				novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
+					completeTask, attachments, cardData, appointment, managerMode);
 			}
-			if ( classificacao == "projeto_implantacao" ){
-				 classificacao = "Projeto/implantação";
-			}
-			if( classificacao == "aprimoramento_profissional" ){
-				 classificacao = "Aprimoramento profissional";
-			}
-			log.warn("%%%%%% classificacao: "+classificacao);
-			fieldsRequisicao.push(participantesObj[i].nome + "");
-			fieldsRequisicao.push(participantesObj[i].matricula + "");
-			fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
-			fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
-			fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
-			fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
-			fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
-			fieldsRequisicao.push(currentMat + "");
-			fieldsRequisicao.push(numSolicPai + "");
-			fieldsRequisicao.push(classificacao + "");
-			fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
-			fieldsRequisicao.push(responsavelArea + "");
-			fieldsRequisicao.push("Sim");
-			var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
-			for (var x = 0; x < fieldsAvaliacao.length; x++) {
-				var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");
-				objField.getItem().add(fieldsAvaliacao[x]);
-				objField.getItem().add(fieldsRequisicao[x]);
-				cardData.getItem().add(objField);
-			}
-			novaSolic = WorkflowEngineService.startProcess(username, password, companyId, processId, choosedState, colleagueIds, comments, userId,
-				completeTask, attachments, cardData, appointment, managerMode);
 		}
+
 
 	} catch (error) {
 		log.error(error);
@@ -119,6 +143,33 @@ function filterParticipantesObj(str) {
 		});
 	}
 	return participantesObj;
+}
+
+/**
+ * Verifica se existe departamentos na lista de participantes
+ * @param {Object} participantesObj 
+ * @returns {Boolean} true, caso haja departamento.
+ */
+function checkIfHasDepartamento(participantesObj) {
+	for (var i = 0; i < participantesObj.length; i++) {
+		if ( participantesObj[i].matricula == "00000" ) {
+			return true;
+		}
+	}
+	return false;
+}
+
+function validateClassificacao(classificacao) {
+	if ( classificacao == "legislacao_obrigatorio" ){ 
+		return "Legislação/Obrigatório";
+	}
+	if ( classificacao == "projeto_implantacao" ){
+		 return "Projeto/implantação";
+	}
+	if( classificacao == "aprimoramento_profissional" ){
+		 return "Aprimoramento profissional";
+	}
+	return classificacao;
 }
 /**
  * Verifica se um usuário existe na base de usuários do Fluig
