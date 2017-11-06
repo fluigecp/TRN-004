@@ -2,3 +2,7 @@
     font-weight: normal !important;
     cursor: pointer;
 }
+
+.radio-inline {
+    margin-left: 0 !important;
+}
