@@ -172,12 +172,14 @@ function validateClassificacao(classificacao) {
 	return classificacao;
 }
 /**
- * Verifica se um usuário existe na base de usuários do Fluig
+ * Verifica se um usuário existe na base de usuários do Fluig e se ele está ativo.
  * @param {string} mat - Matrícula do usuário
+ * @returns {Boolean} - true, caso exista o usuário informado e se ele estiver ativo.
  */
 function searchUserMat(mat) {
-	var c2 = DatasetFactory.createConstraint("colleaguePK.colleagueId", mat, mat, ConstraintType.MUST);
-	var dataset = DatasetFactory.getDataset("colleague", null, [c2], null);
+	var c1 = DatasetFactory.createConstraint("colleaguePK.colleagueId", mat, mat, ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint("active", true, true, ConstraintType.MUST);
+	var dataset = DatasetFactory.getDataset("colleague", null, [c1,c2], null);
 	if (dataset.values.length > 0) {
 		return true;
 	}
