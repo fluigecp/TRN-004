@@ -54,20 +54,19 @@ function servicetask67(attempt, message) {
 
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
-			"instituicao", "dataRealizacao", "cargaHoraria", "avaliadorMat", "numSolicTreinamento",
+			"instituicao", "cargaHoraria", "avaliadorMat", "numSolicTreinamento",
 			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica"];
 
 		/* Checa se existem departamento entre os participantes,
 		 	caso sim, abre solitações em branco a serem preenchidas. */
 		if ( checkIfHasDepartamento(participantesObj) ) {
-			var fieldsAvaliacaoWithDepartamento = ["area", "cursoTreinamento", "instituicao", "dataRealizacao", "cargaHoraria", 
+			var fieldsAvaliacaoWithDepartamento = ["area", "cursoTreinamento", "instituicao", "cargaHoraria", 
 													"numSolicTreinamento", "classificacaoCurso", 
 													 "matResponsavelArea", "aberturaAutomatica"];
 			var fieldsRequisicaoWithDepartamento = [];
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("departamento") + "" );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("treinamentoSolicitado") + "" );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("entidadeSugerida") + "" );
-			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("anoVigencia") + "" );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("cargaHorariaEstimada") + "" );
 			fieldsRequisicaoWithDepartamento.push( numSolicPai + "" );
 			fieldsRequisicaoWithDepartamento.push( validateClassificacao( hAPI.getCardValue("classificacaoCurso") ) );
@@ -102,7 +101,6 @@ function servicetask67(attempt, message) {
 				fieldsRequisicao.push(hAPI.getCardValue("departamento") + "");
 				fieldsRequisicao.push(hAPI.getCardValue("treinamentoSolicitado") + "");
 				fieldsRequisicao.push(hAPI.getCardValue("entidadeSugerida") + "");
-				fieldsRequisicao.push(hAPI.getCardValue("anoVigencia") + "");
 				fieldsRequisicao.push(hAPI.getCardValue("cargaHorariaEstimada") + "");
 				fieldsRequisicao.push(currentMat + "");
 				fieldsRequisicao.push(numSolicPai + "");
