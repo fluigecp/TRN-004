@@ -3,7 +3,7 @@ function validaCampos(atividade, proximaAtividade) {
 	
 	if ( atividade == 0 || atividade == 4 || activity == 17 ) {
 		addHasFree('areaOrcamento');
-		addHasFree('anoVigencia')
+		addHasFree('anoVigencia');
 		addHasFree('departamento');
 		addHasFree('treinamentoSolicitado');
 		addHasFree('entidadeSugerida');
@@ -31,6 +31,10 @@ function validaCampos(atividade, proximaAtividade) {
 			addHasFree("contaContabil");
 			$("#nomeCanvas").removeClass("has-free");
 			$("#numSolicitacaoVerba").removeClass("has-free");
+		}
+
+		if ( getValue("tagControl") != "Sim" ) {
+			throw("Número de participantes insuficientes.");
 		}
 	}
 

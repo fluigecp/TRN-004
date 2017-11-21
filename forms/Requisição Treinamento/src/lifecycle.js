@@ -18,6 +18,7 @@ var lifecycle = (function () {
             if ($('input#guardaDpto').val() !== '' && modo !== 'VIEW') {
                 setAreaDepartamento();
             }
+            $("#participantes").on("fluig.autocomplete.itemAdded fluig.autocomplete.itemRemoved", manipulateDOM.actions4Listeners.onParticipantesAddedRemovedListener);
         }
 
     };

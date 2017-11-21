@@ -40,6 +40,23 @@ var manipulateDOM = (function () {
             }
         },
 
+        onParticipantesAddedRemovedListener: function () {
+            var myTagParticipantes = FLUIGC.autocomplete('#participantes');
+            var myTagParticipantesArray = myTagParticipantes.items();
+            var totalParticipantes = $("#totalParticipantes").val();
+            var participantesObj = manipulateDOM.filterParticipantesObj(myTagParticipantesArray)
+            var hasDepartamento = manipulateDOM.checkIfHasDepartamento(participantesObj);
+            if ( hasDepartamento ) {
+                $("#tagControl").val("Sim");
+            } else {
+                if ( myTagParticipantesArray.length < totalParticipantes ) {
+                    $("#tagControl").val("Não");
+                } else {
+                    $("#tagControl").val("Sim");
+                }
+            }
+        },
+
         origemVerbaListener: function () {
             var origemVerba = this.value;
             var obj = [];
@@ -150,6 +167,36 @@ var manipulateDOM = (function () {
         }
     };
 
+    /**
+     * Verifica se existe departamentos na lista de participantes
+     * @param {Object} participantesObj 
+     * @returns {Boolean} true, caso haja departamento.
+     */
+    var checkIfHasDepartamento = function (participantesObj) {
+        for (var i = 0; i < participantesObj.length; i++) {
+            if ( participantesObj[i].matricula == "00000" ) {
+                return true;
+            }
+        }
+        return false;
+    };
+
+    /**
+     * retorna um array de objetos com nome e matricula de todos os participantes.
+     * @param {string} strArray - Parâmetro array com todos os participantes. 
+     */
+    var filterParticipantesObj = function (strArray) {
+        var participantesObj = [];
+        for (var i = 0; i < strArray.length; i++) {
+            participantesObj.push({
+                nome: strArray[i].substring(strArray[i].indexOf("-") + 2),
+                matricula: strArray[i].substring(0, strArray[i].indexOf("-") - 1)
+            });
+        }
+        return participantesObj;
+    };
+
+
     var updateAutoCompleteWithLimit = function () {
         var autoCompleteFieldId = 'participantes';
         var maxTag = $('#totalParticipantes').val() == "" ? "0" : $('#totalParticipantes').val();
@@ -228,6 +275,8 @@ var manipulateDOM = (function () {
         updateAutoCompleteWithLimit: updateAutoCompleteWithLimit,
         changeToBreakLine: changeToBreakLine,
         enablePopOvers: enablePopOvers,
+        checkIfHasDepartamento: checkIfHasDepartamento,
+        filterParticipantesObj: filterParticipantesObj,
         expandTextareaHistorico: expandTextareaHistorico,
         mostraHistorico: mostraHistorico,
         zoomFields: zoomFields
