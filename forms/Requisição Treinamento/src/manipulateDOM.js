@@ -131,12 +131,22 @@ var manipulateDOM = (function () {
 
             if (selectedItem.inputName == 'participanteFluig') {
                 var participantes = FLUIGC.autocomplete("#participantes");
-                var thisField = FLUIGC.autocomplete("#"+selectedItem.inputName);
+                //var thisField = FLUIGC.autocomplete("#"+selectedItem.inputName);
+                var thisField = window[selectedItem.inputName];
                 var tagData = selectedItem.colleagueId + " - " + selectedItem.colleagueName;
                 participantes.add(tagData);
-                thisField.removeAll();
-                thisField.destroy();
+                thisField.clear();
             }
+
+            if (selectedItem.inputName == 'funcionariosAtivos') {
+                var participantes = FLUIGC.autocomplete("#participantes");
+                //var thisField = FLUIGC.autocomplete("#"+selectedItem.inputName);
+                var thisField = window[selectedItem.inputName];
+                var tagData = selectedItem.matricula + " - " + selectedItem.nome;
+                participantes.add(tagData);
+                thisField.clear();
+            }
+
         },
         /**
          * @description Limpa todos os campos de controle e seta o filtro do campo zoom de departamentos
