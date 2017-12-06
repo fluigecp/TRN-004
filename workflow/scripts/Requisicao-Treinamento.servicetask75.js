@@ -27,9 +27,7 @@ function servicetask75(attempt, message) {
 	 // Array com o nome de todos os campos a serem populados na ficha(participante e treinamento, respectivamente).
 	var fieldsFichaParticipante = ['matricula', 'participante', 'lotacao', 'departamento', 'campoDescritor'];
 	log.warn('%%%%%% fieldsFichaParticipante: ' + fieldsFichaParticipante);
-	var fieldsFichaTreinamento = ['numero_solicitacao_tb1___1', 'titulo_do_treinamento_tb1___1', 'classificacao_treinamento_tb1',
-							 'instituicao_treinamento_tb1', 'justificativa_treinamento_tb1', 'carga_horaria_tb1',
-							  'ano_realizacao_tb1'];
+
 	log.warn('%%%%%% fieldsFichaTreinamento: ' + fieldsFichaTreinamento);
 	var cardFieldDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDto");
 	log.warn('%%%%%% cardFieldDto: ' + cardFieldDto);
@@ -51,6 +49,7 @@ function servicetask75(attempt, message) {
 			// verifica se o participante possui ficha de treinamentos
 			var ficha = checkIfHasFicha(participantesObj[i].matricula);
 			log.warn('%%%%%% ficha: '+ficha);
+			var fieldsFichaTreinamento = getArrayFieldNameTreinamento(ficha);
 			// objeto que irá conter os fields e os metadados referentes ao documento (create)
 			var cardDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardDto"); // container com os dados de formulário e metadados
 			cardDto.setVersion(1000); //metadado que representa a versão do formulário      
@@ -76,10 +75,11 @@ function servicetask75(attempt, message) {
 			var arrayCardValuesTreinamento = [
 				hAPI.getCardValue("numProcess"),
 				hAPI.getCardValue("treinamentoSolicitado"),
-				hAPI.getCardValue("classificacaoCurso"),
+				validateClassificacao(hAPI.getCardValue("classificacaoCurso")),
 				hAPI.getCardValue("entidadeSugerida"),
 				hAPI.getCardValue("justificativa"),
-				hAPI.getCardValue("cargaHorariaEstimada")
+				hAPI.getCardValue("cargaHorariaEstimada"),
+				hAPI.getCardValue("anoVigencia")
 			];
 
 			
@@ -166,7 +166,7 @@ function checkIfHasDepartamento(participantesObj) {
 function checkIfHasFicha(mat) {
 	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 	var c2 = DatasetFactory.createConstraint("matricula", mat, mat, ConstraintType.MUST);
-	var fichaReg = DatasetFactory.getDataset("participante_x_treinamento", null, [c1,c2], null);
+	var fichaReg = DatasetFactory.getDataset("participante_x_treinamento", null, [c1, c2], null);
 	if ( fichaReg.rowsCount > 0 ) {
 		return fichaReg;
 	}
@@ -185,9 +185,46 @@ function getParticipanteHumanusData(mat) {
 function getLotacaoInfo(lotacao) {
 	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 	var c2 = DatasetFactory.createConstraint("codLotacao", lotacao, lotacao, ConstraintType.MUST);
-	var lotacaoData = DatasetFactory.getDataset("cadastro_lotacao", null, [c1,c2], null);
+	var lotacaoData = DatasetFactory.getDataset("cadastro_lotacao", null, [c1, c2], null);
 	if ( lotacaoData.rowsCount > 0 ) {
 		return lotacaoData;
 	}
 	return "";
-}	
+}
+
+function getTreinamentosCount(documentid) {
+	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint("documentid", documentid, documentid, ConstraintType.MUST);
+	var tablename = DatasetFactory.createConstraint("tablename", "treinamentos_realizados", "treinamentos_realizados", ConstraintType.MUST);
+	var fichaParticipante = DatasetFactory.getDataset("participante_x_treinamento", null, [c1, c2, tablename], null);
+	return fichaParticipante.rowsCount;
+}
+
+function validateClassificacao(classificacao) {
+	if ( classificacao == "legislacao_obrigatorio" ){ 
+		return "Legislação/Obrigatório";
+	}
+	if ( classificacao == "projeto_implantacao" ){
+		 return "Projeto/implantação";
+	}
+	if( classificacao == "aprimoramento_profissional" ){
+		 return "Aprimoramento profissional";
+	}
+	return classificacao;
+}
+
+function getArrayFieldNameTreinamento(ficha) {
+	var fieldsFichaTreinamento;
+	if ( ficha != null ) {
+		var i = getTreinamentosCount( ficha.getValue(0, "documentid") ) + 1;
+		fieldsFichaTreinamento = ['numero_solicitacao_tb1___' + i, 'titulo_do_treinamento_tb1___' + i, 'classificacao_treinamento_tb1___' + i,
+		'instituicao_treinamento_tb1___' + i, 'justificativa_treinamento_tb1___' + i, 'carga_horaria_tb1___' + i,
+		 'ano_realizacao_tb1___' + i];
+	} else {
+		fieldsFichaTreinamento = ['numero_solicitacao_tb1___1', 'titulo_do_treinamento_tb1___1', 'classificacao_treinamento_tb1___1',
+		'instituicao_treinamento_tb1___1', 'justificativa_treinamento_tb1___1', 'carga_horaria_tb1___1',
+		 'ano_realizacao_tb1___1'];
+	}
+	log.warn('%%%%%% fieldsFichaTreinamento: ' + fieldsFichaTreinamento);
+	return fieldsFichaTreinamento;
+}
