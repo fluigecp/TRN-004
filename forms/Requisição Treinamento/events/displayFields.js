@@ -60,6 +60,7 @@ function displayFields(form,customHTML) {
 		}
 	} else {
 		ocultaClasse("participanteFluigContainer");
+		ocultaClasse("funcionariosAtivosContainer");
 	}
 	
 	if (activity == 5) {

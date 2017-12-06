@@ -12,6 +12,7 @@ function enableFields(form) {
         form.setEnabled('areaOrcamento',false, true);
         form.setEnabled('anoVigencia',false,true);
         form.setEnabled('participanteFluig',false,true);
+        form.setEnabled('funcionariosAtivos',false,true);
         form.setEnabled('departamento',false, true);
         form.setEnabled('treinamentoSolicitado',false, true);
         form.setEnabled('entidadeSugerida',false, true);
