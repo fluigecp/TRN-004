@@ -6,10 +6,10 @@ function servicetask75(attempt, message) {
 	var serviceHelper = Service.getBean();
 	log.warn('%%%%%% serviceHelper: ' + serviceHelper);
 
-	var serviceInstance = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardServiceServiceLocator");
+	var serviceInstance = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.ECMCardServiceService");
 	log.warn('%%%%%% serviceInstance: ' + serviceInstance);
 
-	var cardFieldDtoArray = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardFieldDtoArray");
+	var cardFieldDtoArray = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDtoArray");
 	log.warn('%%%%%% cardFieldDtoArray: ' + cardFieldDtoArray);
 
 	var portServico = serviceInstance.getCardServicePort();
@@ -25,73 +25,107 @@ function servicetask75(attempt, message) {
 	log.warn('%%%%%% empresa: ' + empresa + ' TypeOf: ' + typeof empresa);
 	
 	 // Array com o nome de todos os campos a serem populados na ficha(participante e treinamento, respectivamente).
-	var fieldsFichaParticipante = ['matricula', 'participante', 'lotacao', 'departamento'];
-	var fieldsFichaTreinamento = ['numero_solicitacao_tb1', 'titulo_do_treinamento_tb1', 'classificacao_treinamento_tb1',
+	var fieldsFichaParticipante = ['matricula', 'participante', 'lotacao', 'departamento', 'campoDescritor'];
+	log.warn('%%%%%% fieldsFichaParticipante: ' + fieldsFichaParticipante);
+	var fieldsFichaTreinamento = ['numero_solicitacao_tb1___1', 'titulo_do_treinamento_tb1___1', 'classificacao_treinamento_tb1',
 							 'instituicao_treinamento_tb1', 'justificativa_treinamento_tb1', 'carga_horaria_tb1',
 							  'ano_realizacao_tb1'];
-	var cardFieldDto = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardFieldDto");
+	log.warn('%%%%%% fieldsFichaTreinamento: ' + fieldsFichaTreinamento);
+	var cardFieldDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDto");
+	log.warn('%%%%%% cardFieldDto: ' + cardFieldDto);
 	// obtém quantidade de participantes
 	var qtdeParticipantes = parseInt( hAPI.getCardValue("totalParticipantes") );
+	log.warn('%%%%%% qtdeParticipantes: ' + qtdeParticipantes);
 	// obtem um objetivo com nome e matricula de todos os participantes
 	var participantesObj = filterParticipantesObj( hAPI.getCardValue("participantes") );
+	log.warn('%%%%%% participantesObj: ' + participantesObj);
 	// verifica se há algum departamento entre os participantes
 	if ( !checkIfHasDepartamento(participantesObj) ) {
+		log.warn('%%%%%% não há departamentos: ');
 		//caso não houver, itera os participantes
 		for (var i = 0; i < qtdeParticipantes; i++) {
 			// Obtém os dados do participante no humanus
 			var humanusData = getParticipanteHumanusData(participantesObj[i].matricula);
+			log.warn('%%%%%% humanusData: ' + humanusData);
+			log.warn('%%%%%% humanusData(rowsCount): ' + humanusData.rowsCount);
 			// verifica se o participante possui ficha de treinamentos
 			var ficha = checkIfHasFicha(participantesObj[i].matricula);
-			if ( ficha != null ) {
-				// se houver, cria a ficha. 
-				var cardDto = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardDto"); // container com os dados de formulário e metadados
-				cardDto.setVersion(1000); //metadado que representa a versão do formulário      
-				cardDto.setParentDocumentId(167); // metadado que representa a pasta referente ao formulário
-				//array que irá encapsular o cardDto
-				var vetCardDto = new Array();
-				// get departamento by lotacao
-				var departamento = getDepartamentoByLotacao(humanusData[0].lotacao);
-				// Array que armazena os valores de cada campo de participante
-				var arrayCardValuesParticipante = [
-					humanusData[0].matricula,
-					humanusData[0].nome,
-					humanusData[0].lotacao,
-					departamento
-				];
-				// Array que armazena os valores de cada campo de treinamento
-				var arrayCardValuesTreinamento = [
-					hAPI.getCardValue("numProcess"),
-					hAPI.getCardValue("treinamentoSolicitado"),
-					hAPI.getCardValue("classificacaoCurso"),
-					hAPI.getCardValue("entidadeSugerida"),
-					hAPI.getCardValue("justificativa"),
-					hAPI.getCardValue("cargaHorariaEstimada")
-				];
-				//vetor que irá armazenar todos os campos e os respectivos valores
-				var vetCardFields = new Array();
-				// objeto array que irá armazenar objetos CardFieldDto
-				var cardFieldDtoArray = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardFieldDtoArray");
-				// execução do laço que irá popular o cardFieldDtoArray com os valores do participante
-				for ( var y = 0; y < fieldsFichaParticipante.length; y++ ) {
-					// instanciando um cardFieldDto para representar um campo do formulário(chave e valor)
-					var cardFieldDto = serviceHelper.instantiate("com.datasul.technology.webdesk.dm.ws.CardFieldDto");
-					//atribuindo a chave do campo
-					cardFieldDto.setField(fieldsFichaParticipante[i]);
-					//atribuindo valor ao campo
-					cardFieldDto.setValue(arrayCardValuesParticipante[i]);
-					// adicionando no array de valores
-					vetCardFields.push(cardFieldDto);
-				}
+			log.warn('%%%%%% ficha: '+ficha);
+			// objeto que irá conter os fields e os metadados referentes ao documento (create)
+			var cardDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardDto"); // container com os dados de formulário e metadados
+			cardDto.setVersion(1000); //metadado que representa a versão do formulário      
+			cardDto.setParentDocumentId(28592); // metadado que representa a pasta referente ao formulário
 
-				for ( var z = 0; z < fieldsFichaTreinamento.length; z++) {
-					// lógica para atribuir todos os valores de treinamento na tabela pai-filho de treinamentos do formulário.
-					// https://forum.fluig.com/650-ecmcardservice---create---nao-cria-campos-de-tabela-paixfilho
-				}
+			// objeto que irá armazenar todos os campos e os respectivos valores (update)
+			var cardFieldDtoArray = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDtoArray");
 
+			// get lotacao Info
+			var lotacaoInfo = getLotacaoInfo( parseInt(humanusData.getValue(0,"lotacao")) );
+			// get departamento
+			var departamento = lotacaoInfo == "" ? lotacaoInfo : lotacaoInfo.getValue(0,"departamento");
+			// Array que armazena os valores de cada campo de participante
+			var arrayCardValuesParticipante = [
+				parseInt(humanusData.getValue(0,"matricula")),
+				humanusData.getValue(0,"nome"),
+				parseInt(humanusData.getValue(0,"lotacao")),
+				departamento,
+				humanusData.getValue(0,"nome")
+			];
+			log.warn('%%%%%% arrayCardValuesParticipante: '+arrayCardValuesParticipante);
+			// Array que armazena os valores de cada campo de treinamento
+			var arrayCardValuesTreinamento = [
+				hAPI.getCardValue("numProcess"),
+				hAPI.getCardValue("treinamentoSolicitado"),
+				hAPI.getCardValue("classificacaoCurso"),
+				hAPI.getCardValue("entidadeSugerida"),
+				hAPI.getCardValue("justificativa"),
+				hAPI.getCardValue("cargaHorariaEstimada")
+			];
+
+			
+			// execução do laço que irá popular o cardFieldDtoArray com os valores do participante
+			for ( var y = 0; y < fieldsFichaParticipante.length; y++ ) {
+				// instanciando um cardFieldDto para representar um campo do formulário(chave e valor)
+				var cardFieldDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDto");
+				//atribuindo a chave do campo
+				cardFieldDto.setField(fieldsFichaParticipante[y]);
+				//atribuindo valor ao campo
+				cardFieldDto.setValue(arrayCardValuesParticipante[y]);
+				// adicionando no objeto de valores - update
+				cardFieldDtoArray.getItem().add(cardFieldDto);
+				// adicionando no cardDto - create
+				cardDto.getCardData().add(cardFieldDto);
 			}
+
+			for ( var z = 0; z < fieldsFichaTreinamento.length; z++) {
+				// lógica para atribuir todos os valores de treinamento na tabela pai-filho de treinamentos do formulário.
+				// https://forum.fluig.com/650-ecmcardservice---create---nao-cria-campos-de-tabela-paixfilho
+				// instanciando um cardFieldDto para representar um campo do formulário(chave e valor)
+				var cardFieldDto = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardFieldDto");
+				//atribuindo a chave do campo
+				cardFieldDto.setField(fieldsFichaTreinamento[z]);
+				//atribuindo valor ao campo
+				cardFieldDto.setValue(arrayCardValuesTreinamento[z]);
+				// adicionando no objeto de valores - update
+				cardFieldDtoArray.getItem().add(cardFieldDto);
+				// adicionando no cardDto - create
+				cardDto.getCardData().add(cardFieldDto);
+			}
+			// se houver, atualiza a ficha. 
+			if ( ficha != null ) {
+				// objeto array que irá armazenar objetos CardFieldDto
+				log.warn('%%%%%% atualizando ficha ');
+				portServico.updateCardData(empresa, user, password, ficha.getValue(0, "documentid"), cardFieldDtoArray);
+				log.warn('%%%%%% ficha atualizada ');
+			} else { // cria a ficha
+				log.warn('%%%%%% criando ficha ');
+				var cardDtoArray = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardDtoArray");				
+				cardDtoArray.getItem().add(cardDto);
+				portServico.create(empresa, user, password, cardDtoArray);
+				log.warn('%%%%%% ficha criada ');
+			}	
 		}
 	}
-
   //var serviceLocator = serviceHelper.instantiate('classe.locator');
  } catch(error) { 
 	log.error(error);
@@ -133,8 +167,8 @@ function checkIfHasFicha(mat) {
 	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 	var c2 = DatasetFactory.createConstraint("matricula", mat, mat, ConstraintType.MUST);
 	var fichaReg = DatasetFactory.getDataset("participante_x_treinamento", null, [c1,c2], null);
-	if ( fichaReg.values.length > 0 ) {
-		return fichaReg.values;
+	if ( fichaReg.rowsCount > 0 ) {
+		return fichaReg;
 	}
 	return null;
 }
@@ -142,18 +176,18 @@ function checkIfHasFicha(mat) {
 function getParticipanteHumanusData(mat) {
 	var c1 = DatasetFactory.createConstraint("matricula", mat, mat, ConstraintType.MUST);
 	var humanusData = DatasetFactory.getDataset("wsFuncionarios", null, [c1], null);
-	if ( humanusData.values.length > 0 ) {
-		return humanusData.values;
+	if ( humanusData.rowsCount > 0 ) {
+		return humanusData;
 	}
 	return null;
 }
 
-function getDepartamentoByLotacao(lotacao) {
+function getLotacaoInfo(lotacao) {
 	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
 	var c2 = DatasetFactory.createConstraint("codLotacao", lotacao, lotacao, ConstraintType.MUST);
 	var lotacaoData = DatasetFactory.getDataset("cadastro_lotacao", null, [c1,c2], null);
-	if ( lotacaoData.values.length > 0 ) {
-		return lotacaoData.values[0].departamento;
+	if ( lotacaoData.rowsCount > 0 ) {
+		return lotacaoData;
 	}
 	return "";
 }	
