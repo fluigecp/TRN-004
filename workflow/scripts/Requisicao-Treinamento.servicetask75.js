@@ -1,5 +1,8 @@
 function servicetask75(attempt, message) {
 	try {
+		var numSolicitacao = hAPI.getCardValue("numProcess");
+		log.warn('%%%%%% numSolicitacao: ' + numSolicitacao);
+
 		var Service = ServiceManager.getService('ECMCardService');
 		log.warn('%%%%%% Service: ' + Service);
 
@@ -73,7 +76,7 @@ function servicetask75(attempt, message) {
 				log.warn('%%%%%% arrayCardValuesParticipante: ' + arrayCardValuesParticipante);
 				// Array que armazena os valores de cada campo de treinamento
 				var arrayCardValuesTreinamento = [
-					hAPI.getCardValue("numProcess"),
+					numSolicitacao,
 					hAPI.getCardValue("treinamentoSolicitado"),
 					validateClassificacao(hAPI.getCardValue("classificacaoCurso")),
 					"Não",
@@ -116,8 +119,12 @@ function servicetask75(attempt, message) {
 				if (ficha != null) {
 					// objeto array que irá armazenar objetos CardFieldDto
 					log.warn('%%%%%% atualizando ficha ');
-					portServico.updateCardData(empresa, user, password, ficha.getValue(0, "documentid"), cardFieldDtoArray);
-					log.warn('%%%%%% ficha atualizada ');
+					var docIdParticipante = ficha.getValue(0, "documentid");
+					// Verifica se o treinamento já foi cadastrado anteriormente. Caso não, ele adiciona o treinamento.
+					if ( !checkIfTreinamentoIsAlreadyRegistered(docIdParticipante, numSolicitacao) ) {
+						portServico.updateCardData(empresa, user, password, ficha.getValue(0, "documentid"), cardFieldDtoArray);
+						log.warn('%%%%%% ficha atualizada ');
+					}
 				} else { // cria a ficha
 					log.warn('%%%%%% criando ficha ');
 					var cardDtoArray = serviceHelper.instantiate("com.totvs.technology.ecm.dm.ws.CardDtoArray");
@@ -255,4 +262,24 @@ function getArrayFieldNameTreinamento(ficha) {
 	}
 	log.warn('%%%%%% fieldsFichaTreinamento: ' + fieldsFichaTreinamento);
 	return fieldsFichaTreinamento;
+}
+/**
+ * 
+ * @description Verifica se o treinamento já foi inserido na table de treinamentos do participante.
+ * @param {number} docId - documentid da Ficha do participante
+ * @param {number} numSolic - Número da solicitação do treinamento
+ * @returns - Boolean - true caso já exista, false caso ainda não exista.
+ * 
+ */
+function checkIfTreinamentoIsAlreadyRegistered(docId, numSolic){
+	var c1 = DatasetFactory.createConstraint("metadata#active", true, true, ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint("documentid", docId, docId, ConstraintType.MUST);
+	var tablename = DatasetFactory.createConstraint("tablename", "treinamentos_realizados", "treinamentos_realizados", ConstraintType.MUST);
+	var fichaParticipante = DatasetFactory.getDataset("participante_x_treinamento", null, [c1, c2, tablename], null);
+	for (var i = 0; i < fichaParticipante.rowsCount; i++) {
+		if ( fichaParticipante.getValue(i, "numero_solicitacao_tb1") == numSolic ) {
+			return true;
+		}
+	}
+	return false;
 }

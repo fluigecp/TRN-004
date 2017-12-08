@@ -26,7 +26,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Requisitar Treinamento</processId>
-      <version>53</version>
+      <version>72</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -986,7 +986,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Sim&quot;</condition>
@@ -997,7 +997,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Não&quot;</condition>
@@ -1008,7 +1008,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Cancelar&quot;</condition>
@@ -1019,7 +1019,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Sim&quot;</condition>
@@ -1030,7 +1030,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Não&quot;</condition>
@@ -1041,7 +1041,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>53</version>
+        <version>72</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Cancelar&quot;</condition>
@@ -1655,6 +1655,9 @@ function searchUserMat(mat) {
       </workflowProcessEventPK>
       <eventDescription>function servicetask75(attempt, message) {
 	try {
+		var numSolicitacao = hAPI.getCardValue(&quot;numProcess&quot;);
+		log.warn(&apos;%%%%%% numSolicitacao: &apos; + numSolicitacao);
+
 		var Service = ServiceManager.getService(&apos;ECMCardService&apos;);
 		log.warn(&apos;%%%%%% Service: &apos; + Service);
 
@@ -1728,7 +1731,7 @@ function searchUserMat(mat) {
 				log.warn(&apos;%%%%%% arrayCardValuesParticipante: &apos; + arrayCardValuesParticipante);
 				// Array que armazena os valores de cada campo de treinamento
 				var arrayCardValuesTreinamento = [
-					hAPI.getCardValue(&quot;numProcess&quot;),
+					numSolicitacao,
 					hAPI.getCardValue(&quot;treinamentoSolicitado&quot;),
 					validateClassificacao(hAPI.getCardValue(&quot;classificacaoCurso&quot;)),
 					&quot;Não&quot;,
@@ -1771,8 +1774,12 @@ function searchUserMat(mat) {
 				if (ficha != null) {
 					// objeto array que irá armazenar objetos CardFieldDto
 					log.warn(&apos;%%%%%% atualizando ficha &apos;);
-					portServico.updateCardData(empresa, user, password, ficha.getValue(0, &quot;documentid&quot;), cardFieldDtoArray);
-					log.warn(&apos;%%%%%% ficha atualizada &apos;);
+					var docIdParticipante = ficha.getValue(0, &quot;documentid&quot;);
+					// Verifica se o treinamento já foi cadastrado anteriormente. Caso não, ele adiciona o treinamento.
+					if ( !checkIfTreinamentoIsAlreadyRegistered(docIdParticipante, numSolicitacao) ) {
+						portServico.updateCardData(empresa, user, password, ficha.getValue(0, &quot;documentid&quot;), cardFieldDtoArray);
+						log.warn(&apos;%%%%%% ficha atualizada &apos;);
+					}
 				} else { // cria a ficha
 					log.warn(&apos;%%%%%% criando ficha &apos;);
 					var cardDtoArray = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardDtoArray&quot;);
@@ -1911,7 +1918,26 @@ function getArrayFieldNameTreinamento(ficha) {
 	log.warn(&apos;%%%%%% fieldsFichaTreinamento: &apos; + fieldsFichaTreinamento);
 	return fieldsFichaTreinamento;
 }
-</eventDescription>
+/**
+ * 
+ * @description Verifica se o treinamento já foi inserido na table de treinamentos do participante.
+ * @param {number} docId - documentid da Ficha do participante
+ * @param {number} numSolic - Número da solicitação do treinamento
+ * @returns - Boolean - true caso já exista, false caso ainda não exista.
+ * 
+ */
+function checkIfTreinamentoIsAlreadyRegistered(docId, numSolic){
+	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);
+	var c2 = DatasetFactory.createConstraint(&quot;documentid&quot;, docId, docId, ConstraintType.MUST);
+	var tablename = DatasetFactory.createConstraint(&quot;tablename&quot;, &quot;treinamentos_realizados&quot;, &quot;treinamentos_realizados&quot;, ConstraintType.MUST);
+	var fichaParticipante = DatasetFactory.getDataset(&quot;participante_x_treinamento&quot;, null, [c1, c2, tablename], null);
+	for (var i = 0; i &lt; fichaParticipante.rowsCount; i++) {
+		if ( fichaParticipante.getValue(i, &quot;numero_solicitacao_tb1&quot;) == numSolic ) {
+			return true;
+		}
+	}
+	return false;
+}</eventDescription>
     </WorkflowProcessEvent>
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
@@ -1976,7 +2002,7 @@ function getArrayFieldNameTreinamento(ficha) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>loginUserWS</propertyId>
-        <version>53</version>
+        <version>72</version>
       </advancedProcessPropertiesPK>
       <propertieValue>servico</propertieValue>
     </AdvancedProcessProperties>
@@ -1985,7 +2011,7 @@ function getArrayFieldNameTreinamento(ficha) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>matUserWS</propertyId>
-        <version>53</version>
+        <version>72</version>
       </advancedProcessPropertiesPK>
       <propertieValue>0000</propertieValue>
     </AdvancedProcessProperties>
@@ -1994,7 +2020,7 @@ function getArrayFieldNameTreinamento(ficha) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>passwdUserWS</propertyId>
-        <version>53</version>
+        <version>72</version>
       </advancedProcessPropertiesPK>
       <propertieValue>fcea920f7412b5da7be0cf42b8c93759</propertieValue>
     </AdvancedProcessProperties>
@@ -2088,7 +2114,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>12</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2099,7 +2125,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2110,7 +2136,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>46</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2121,7 +2147,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>56</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2132,7 +2158,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>72</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2143,7 +2169,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>72</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2154,7 +2180,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>81</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -2165,7 +2191,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <linkSequence>81</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -2179,7 +2205,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <stateSequence>0</stateSequence>
         <propertyName>loginUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -2192,7 +2218,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <stateSequence>0</stateSequence>
         <propertyName>matUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -2205,7 +2231,7 @@ function getArrayFieldNameTreinamento(ficha) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>53</version>
+        <version>72</version>
         <stateSequence>0</stateSequence>
         <propertyName>passwdUserWS</propertyName>
       </extendedPropertyFieldPK>
