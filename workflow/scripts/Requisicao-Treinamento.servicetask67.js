@@ -55,14 +55,16 @@ function servicetask67(attempt, message) {
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue("participantes"));
 		var fieldsAvaliacao = ["nomeParticipante", "matricula", "area", "cursoTreinamento",
 			"instituicao", "cargaHoraria", "avaliadorMat", "numSolicTreinamento",
-			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica"];
+			"classificacaoCurso", "campoDescritor", "matResponsavelArea", "aberturaAutomatica",
+			"justificativaTreinamento", "anoTreinamento", "processIdOrigin"];
 
 		/* Checa se existem departamento entre os participantes,
 		 	caso sim, abre solitações em branco a serem preenchidas. */
 		if ( checkIfHasDepartamento(participantesObj) ) {
 			var fieldsAvaliacaoWithDepartamento = ["area", "cursoTreinamento", "instituicao", "cargaHoraria", 
 													"numSolicTreinamento", "classificacaoCurso", 
-													 "matResponsavelArea", "aberturaAutomatica"];
+													 "matResponsavelArea", "aberturaAutomatica","justificativaTreinamento",
+													  "anoTreinamento", "processIdOrigin"];
 			var fieldsRequisicaoWithDepartamento = [];
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("departamento") + "" );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("treinamentoSolicitado") + "" );
@@ -72,6 +74,9 @@ function servicetask67(attempt, message) {
 			fieldsRequisicaoWithDepartamento.push( validateClassificacao( hAPI.getCardValue("classificacaoCurso") ) );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("matResponsavelDepartamento") + "" );
 			fieldsRequisicaoWithDepartamento.push( "Sim" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("justificativa") + "" );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue("anoVigencia") + "" );
+			fieldsRequisicaoWithDepartamento.push( "TRN-004" );
 			var qtdeParticipantes = parseInt( hAPI.getCardValue("totalParticipantes") );
 			for (var y = 0; y < qtdeParticipantes; y++) {
 				var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
@@ -108,6 +113,9 @@ function servicetask67(attempt, message) {
 				fieldsRequisicao.push(participantesObj[i].nome + " - " + hAPI.getCardValue("treinamentoSolicitado") + "");
 				fieldsRequisicao.push(responsavelArea + "");
 				fieldsRequisicao.push("Sim");
+				fieldsRequisicao.push( hAPI.getCardValue("justificativa") + "" );
+				fieldsRequisicao.push( hAPI.getCardValue("anoVigencia") + "" );
+				fieldsRequisicao.push( "TRN-004" );
 				var cardData = servico.instantiate("net.java.dev.jaxb.array.StringArrayArray");
 				for (var x = 0; x < fieldsAvaliacao.length; x++) {
 					var objField = servico.instantiate("net.java.dev.jaxb.array.StringArray");

@@ -505,106 +505,6 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>1</version>
-        <sequence>75</sequence>
-      </processStatePK>
-      <stateName>Atualizar fichas de treinamento</stateName>
-      <stateDescription>Atualizar fichas de treinamento</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <selectColleague>0</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1249</positionX>
-      <positionY>723</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>82</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>1</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <sequence>80</sequence>
-      </processStatePK>
-      <stateName>Tratar erro</stateName>
-      <stateDescription>Tratar erro</stateDescription>
-      <instruction></instruction>
-      <deadlineTime>0</deadlineTime>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId>Pool Grupo</engineAllocationId>
-      <engineAllocationConfiguration>&lt;AssignmentController&gt;&lt;Group&gt;Processos&lt;/Group&gt;&lt;/AssignmentController&gt;</engineAllocationConfiguration>
-      <selectColleague>0</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>3600</allowanceAuthorityTime>
-      <frequenceAuthorityTime>3600</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1250</positionX>
-      <positionY>937</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <allowanceManagerTime>0</allowanceManagerTime>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>80</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <noticeExpirationAuthorityTime>0</noticeExpirationAuthorityTime>
-      <noticeExpirationRequisitionerTime>0</noticeExpirationRequisitionerTime>
-      <noticeExpirationManagerTime>0</noticeExpirationManagerTime>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <executionType>0</executionType>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
         <sequence>28</sequence>
       </processStatePK>
       <stateName>Intermediário</stateName>
@@ -740,53 +640,6 @@
       <destinationStates/>
       <digitalSignature>false</digitalSignature>
       <parentSequence>67</parentSequence>
-    </ProcessState>
-    <ProcessState>
-      <processStatePK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <sequence>76</sequence>
-      </processStatePK>
-      <stateName>Intermediário</stateName>
-      <stateDescription>Intermediário</stateDescription>
-      <instruction>Evento intermediário do processo</instruction>
-      <deadlineTime>0</deadlineTime>
-      <joint>false</joint>
-      <agreementPercentage>0</agreementPercentage>
-      <engineAllocationId></engineAllocationId>
-      <engineAllocationConfiguration></engineAllocationConfiguration>
-      <selectColleague>0</selectColleague>
-      <initialState>false</initialState>
-      <notifyAuthorityDelay>true</notifyAuthorityDelay>
-      <notifyRequisitionerDelay>false</notifyRequisitionerDelay>
-      <allowanceAuthorityTime>1</allowanceAuthorityTime>
-      <frequenceAuthorityTime>1</frequenceAuthorityTime>
-      <allowanceRequisitionerTime>0</allowanceRequisitionerTime>
-      <frequenceRequisitionerTime>0</frequenceRequisitionerTime>
-      <transferAttachments>false</transferAttachments>
-      <subProcessId></subProcessId>
-      <formFolder>0</formFolder>
-      <notifyAuthorityFollowUp>true</notifyAuthorityFollowUp>
-      <notifyRequisitionerFollowUp>false</notifyRequisitionerFollowUp>
-      <automatic>false</automatic>
-      <positionX>1250</positionX>
-      <positionY>790</positionY>
-      <forecastedEffortType>0</forecastedEffortType>
-      <forecastedEffort>0</forecastedEffort>
-      <notifyManagerFollowUp>false</notifyManagerFollowUp>
-      <notifyManagerDelay>false</notifyManagerDelay>
-      <frequenceManagerTime>0</frequenceManagerTime>
-      <inhibitTransfer>false</inhibitTransfer>
-      <periodId></periodId>
-      <stateType>0</stateType>
-      <bpmnType>43</bpmnType>
-      <signalId>0</signalId>
-      <counterSign>false</counterSign>
-      <openInstances>0</openInstances>
-      <destinationStates/>
-      <digitalSignature>false</digitalSignature>
-      <parentSequence>75</parentSequence>
     </ProcessState>
     <ProcessState>
       <processStatePK>
@@ -1310,11 +1163,11 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>1</version>
-        <linkSequence>78</linkSequence>
+        <linkSequence>75</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
-      <initialStateSequence>75</initialStateSequence>
+      <initialStateSequence>45</initialStateSequence>
       <finalStateSequence>67</finalStateSequence>
       <returnLabel></returnLabel>
       <name></name>
@@ -1326,55 +1179,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>1</version>
-        <linkSequence>79</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>45</initialStateSequence>
-      <finalStateSequence>75</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <linkSequence>81</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>76</initialStateSequence>
-      <finalStateSequence>80</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <linkSequence>82</linkSequence>
-      </processLinkPK>
-      <actionLabel></actionLabel>
-      <returnPermited>false</returnPermited>
-      <initialStateSequence>80</initialStateSequence>
-      <finalStateSequence>75</finalStateSequence>
-      <returnLabel></returnLabel>
-      <name></name>
-      <automaticLink>false</automaticLink>
-      <type>0</type>
-    </ProcessLink>
-    <ProcessLink>
-      <processLinkPK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-        <linkSequence>83</linkSequence>
+        <linkSequence>76</linkSequence>
       </processLinkPK>
       <actionLabel></actionLabel>
       <returnPermited>false</returnPermited>
@@ -1649,299 +1454,6 @@ function searchUserMat(mat) {
     <WorkflowProcessEvent>
       <workflowProcessEventPK>
         <companyId>1</companyId>
-        <eventId>servicetask75</eventId>
-        <processId>TRN-004</processId>
-        <version>1</version>
-      </workflowProcessEventPK>
-      <eventDescription>function servicetask75(attempt, message) {
-	try {
-		var numSolicitacao = hAPI.getCardValue(&quot;numProcess&quot;);
-		log.warn(&apos;%%%%%% numSolicitacao: &apos; + numSolicitacao);
-
-		var Service = ServiceManager.getService(&apos;ECMCardService&apos;);
-		log.warn(&apos;%%%%%% Service: &apos; + Service);
-
-		var serviceHelper = Service.getBean();
-		log.warn(&apos;%%%%%% serviceHelper: &apos; + serviceHelper);
-
-		var serviceInstance = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.ECMCardServiceService&quot;);
-		log.warn(&apos;%%%%%% serviceInstance: &apos; + serviceInstance);
-
-		var cardFieldDtoArray = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardFieldDtoArray&quot;);
-		log.warn(&apos;%%%%%% cardFieldDtoArray: &apos; + cardFieldDtoArray);
-
-		var portServico = serviceInstance.getCardServicePort();
-		log.warn(&apos;%%%%%% portServico: &apos; + portServico);
-
-		var user = hAPI.getAdvancedProperty(&quot;loginUserWS&quot;);
-		log.warn(&apos;%%%%%% user: &apos; + user);
-
-		var password = hAPI.getAdvancedProperty(&quot;passwdUserWS&quot;);
-		log.warn(&apos;%%%%%% password: &apos; + password);
-
-		var empresa = parseInt(getValue(&quot;WKCompany&quot;));
-		log.warn(&apos;%%%%%% empresa: &apos; + empresa + &apos; TypeOf: &apos; + typeof empresa);
-
-		// Array com o nome de todos os campos a serem populados na ficha(participante e treinamento, respectivamente).
-		var fieldsFichaParticipante = [&apos;matricula&apos;, &apos;participante&apos;, &apos;lotacao&apos;, &apos;departamento&apos;, &apos;campoDescritor&apos;];
-		log.warn(&apos;%%%%%% fieldsFichaParticipante: &apos; + fieldsFichaParticipante);
-
-		log.warn(&apos;%%%%%% fieldsFichaTreinamento: &apos; + fieldsFichaTreinamento);
-		var cardFieldDto = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardFieldDto&quot;);
-		log.warn(&apos;%%%%%% cardFieldDto: &apos; + cardFieldDto);
-		// obtém quantidade de participantes
-		var qtdeParticipantes = parseInt(hAPI.getCardValue(&quot;totalParticipantes&quot;));
-		log.warn(&apos;%%%%%% qtdeParticipantes: &apos; + qtdeParticipantes);
-		// obtem um objetivo com nome e matricula de todos os participantes
-		var participantesObj = filterParticipantesObj(hAPI.getCardValue(&quot;participantes&quot;));
-		log.warn(&apos;%%%%%% participantesObj: &apos; + participantesObj);
-		// verifica se há algum departamento entre os participantes
-		if (!checkIfHasDepartamento(participantesObj)) {
-			log.warn(&apos;%%%%%% não há departamentos: &apos;);
-			//caso não houver, itera os participantes
-			for (var i = 0; i &lt; qtdeParticipantes; i++) {
-				// Obtém os dados do participante no humanus
-				var humanusData = getParticipanteHumanusData(participantesObj[i].matricula);
-				log.warn(&apos;%%%%%% humanusData: &apos; + humanusData);
-				log.warn(&apos;%%%%%% humanusData(rowsCount): &apos; + humanusData.rowsCount);
-				// verifica se o participante possui ficha de treinamentos
-				var ficha = checkIfHasFicha(participantesObj[i].matricula);
-				log.warn(&apos;%%%%%% ficha: &apos; + ficha);
-				var fieldsFichaTreinamento = getArrayFieldNameTreinamento(ficha);
-				// objeto que irá conter os fields e os metadados referentes ao documento (create)
-				var cardDto = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardDto&quot;); // container com os dados de formulário e metadados
-				cardDto.setVersion(1000); //metadado que representa a versão do formulário      
-				cardDto.setParentDocumentId(28592); // metadado que representa a pasta referente ao formulário
-
-				// objeto que irá armazenar todos os campos e os respectivos valores (update)
-				var cardFieldDtoArray = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardFieldDtoArray&quot;);
-
-				// get lotacao Info
-				var lotacaoInfo = getLotacaoInfo(parseInt(humanusData.getValue(0, &quot;lotacao&quot;)));
-				// get departamento
-				var departamento = lotacaoInfo == &quot;&quot; ? lotacaoInfo : lotacaoInfo.getValue(0, &quot;departamento&quot;);
-				// Array que armazena os valores de cada campo de participante
-				var arrayCardValuesParticipante = [
-					parseInt(humanusData.getValue(0, &quot;matricula&quot;)),
-					humanusData.getValue(0, &quot;nome&quot;),
-					parseInt(humanusData.getValue(0, &quot;lotacao&quot;)),
-					departamento,
-					humanusData.getValue(0, &quot;nome&quot;)
-				];
-				log.warn(&apos;%%%%%% arrayCardValuesParticipante: &apos; + arrayCardValuesParticipante);
-				// Array que armazena os valores de cada campo de treinamento
-				var arrayCardValuesTreinamento = [
-					numSolicitacao,
-					hAPI.getCardValue(&quot;treinamentoSolicitado&quot;),
-					validateClassificacao(hAPI.getCardValue(&quot;classificacaoCurso&quot;)),
-					&quot;Não&quot;,
-					hAPI.getCardValue(&quot;entidadeSugerida&quot;),
-					hAPI.getCardValue(&quot;justificativa&quot;),
-					hAPI.getCardValue(&quot;cargaHorariaEstimada&quot;),
-					hAPI.getCardValue(&quot;anoVigencia&quot;)
-				];
-
-
-				// execução do laço que irá popular o cardFieldDtoArray com os valores do participante
-				for (var y = 0; y &lt; fieldsFichaParticipante.length; y++) {
-					// instanciando um cardFieldDto para representar um campo do formulário(chave e valor)
-					var cardFieldDto = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardFieldDto&quot;);
-					//atribuindo a chave do campo
-					cardFieldDto.setField(fieldsFichaParticipante[y]);
-					//atribuindo valor ao campo
-					cardFieldDto.setValue(arrayCardValuesParticipante[y]);
-					// adicionando no objeto de valores - update
-					cardFieldDtoArray.getItem().add(cardFieldDto);
-					// adicionando no cardDto - create
-					cardDto.getCardData().add(cardFieldDto);
-				}
-
-				for (var z = 0; z &lt; fieldsFichaTreinamento.length; z++) {
-					// lógica para atribuir todos os valores de treinamento na tabela pai-filho de treinamentos do formulário.
-					// https://forum.fluig.com/650-ecmcardservice---create---nao-cria-campos-de-tabela-paixfilho
-					// instanciando um cardFieldDto para representar um campo do formulário(chave e valor)
-					var cardFieldDto = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardFieldDto&quot;);
-					//atribuindo a chave do campo
-					cardFieldDto.setField(fieldsFichaTreinamento[z]);
-					//atribuindo valor ao campo
-					cardFieldDto.setValue(arrayCardValuesTreinamento[z]);
-					// adicionando no objeto de valores - update
-					cardFieldDtoArray.getItem().add(cardFieldDto);
-					// adicionando no cardDto - create
-					cardDto.getCardData().add(cardFieldDto);
-				}
-				// se houver, atualiza a ficha. 
-				if (ficha != null) {
-					// objeto array que irá armazenar objetos CardFieldDto
-					log.warn(&apos;%%%%%% atualizando ficha &apos;);
-					var docIdParticipante = ficha.getValue(0, &quot;documentid&quot;);
-					// Verifica se o treinamento já foi cadastrado anteriormente. Caso não, ele adiciona o treinamento.
-					if ( !checkIfTreinamentoIsAlreadyRegistered(docIdParticipante, numSolicitacao) ) {
-						portServico.updateCardData(empresa, user, password, ficha.getValue(0, &quot;documentid&quot;), cardFieldDtoArray);
-						log.warn(&apos;%%%%%% ficha atualizada &apos;);
-					}
-				} else { // cria a ficha
-					log.warn(&apos;%%%%%% criando ficha &apos;);
-					var cardDtoArray = serviceHelper.instantiate(&quot;com.totvs.technology.ecm.dm.ws.CardDtoArray&quot;);
-					cardDtoArray.getItem().add(cardDto);
-					portServico.create(empresa, user, password, cardDtoArray);
-					log.warn(&apos;%%%%%% ficha criada &apos;);
-				}
-			}
-		}
-		//var serviceLocator = serviceHelper.instantiate(&apos;classe.locator&apos;);
-	} catch (error) {
-		log.error(error);
-		throw error;
-	}
-}
-
-/**
- * retorna um array de objetos com nome e matricula de todos os participantes.
- * @param {string} str - Parâmetro string com o nome de todos os participantes, separados com virgula 
- */
-function filterParticipantesObj(str) {
-	var strArray = str.split(&quot;,&quot;);
-	var participantesObj = [];
-	for (var i = 0; i &lt; strArray.length; i++) {
-		participantesObj.push({
-			nome: strArray[i].substring(strArray[i].indexOf(&quot;-&quot;) + 2),
-			matricula: strArray[i].substring(0, strArray[i].indexOf(&quot;-&quot;) - 1)
-		});
-	}
-	return participantesObj;
-}
-
-/**
- * Verifica se existe departamentos na lista de participantes
- * @param {Object} participantesObj 
- * @returns {Boolean} true, caso haja departamento.
- */
-function checkIfHasDepartamento(participantesObj) {
-	for (var i = 0; i &lt; participantesObj.length; i++) {
-		if (participantesObj[i].matricula == &quot;00000&quot;) {
-			return true;
-		}
-	}
-	return false;
-}
-/**
- * Verifica se o participante possui ficha de treinamento.
- * @param {int} mat - Matricula do participante
- * @returns obj Dataset, caso tenha ficha, null caso não tenha.
- */
-function checkIfHasFicha(mat) {
-	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);
-	var c2 = DatasetFactory.createConstraint(&quot;matricula&quot;, mat, mat, ConstraintType.MUST);
-	var fichaReg = DatasetFactory.getDataset(&quot;participante_x_treinamento&quot;, null, [c1, c2], null);
-	if (fichaReg.rowsCount &gt; 0) {
-		return fichaReg;
-	}
-	return null;
-}
-/**
- * Retorna os dados do participante
- * @param {int} mat  - Matricula do participante
- * @returns - Obj Dataset, caso a matrícula seja encontrada na base de dados, null caso a matricula não seja encontrada.
- */
-function getParticipanteHumanusData(mat) {
-	var c1 = DatasetFactory.createConstraint(&quot;matricula&quot;, mat, mat, ConstraintType.MUST);
-	var humanusData = DatasetFactory.getDataset(&quot;wsFuncionarios&quot;, null, [c1], null);
-	if (humanusData.rowsCount &gt; 0) {
-		return humanusData;
-	}
-	return null;
-}
-/**
- * Retorna os dados da lotação
- * @param {int} lotacao - código da lotação
- * @returns - Objeto Dataset com os dados da lotação, caso não exista, retorna &quot;&quot;.
- */
-function getLotacaoInfo(lotacao) {
-	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);
-	var c2 = DatasetFactory.createConstraint(&quot;codLotacao&quot;, lotacao, lotacao, ConstraintType.MUST);
-	var lotacaoData = DatasetFactory.getDataset(&quot;cadastro_lotacao&quot;, null, [c1, c2], null);
-	if (lotacaoData.rowsCount &gt; 0) {
-		return lotacaoData;
-	}
-	return &quot;&quot;;
-}
-/**
- * Retorna a quantidade de treinamentos existentes na ficha do participante
- * @param {int} documentid - id da ficha de treinamento
- * @returns - quantidade de treinamentos registrados.
- */
-function getTreinamentosCount(documentid) {
-	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);
-	var c2 = DatasetFactory.createConstraint(&quot;documentid&quot;, documentid, documentid, ConstraintType.MUST);
-	var tablename = DatasetFactory.createConstraint(&quot;tablename&quot;, &quot;treinamentos_realizados&quot;, &quot;treinamentos_realizados&quot;, ConstraintType.MUST);
-	var fichaParticipante = DatasetFactory.getDataset(&quot;participante_x_treinamento&quot;, null, [c1, c2, tablename], null);
-	return fichaParticipante.rowsCount;
-}
-/**
- * Retorna a classificação de treinamento formatada para exibição
- * @param {string} classificacao - classificação não-formatada
- * @returns string com a classificação formatada
- */
-function validateClassificacao(classificacao) {
-	if (classificacao == &quot;legislacao_obrigatorio&quot;) {
-		return &quot;Legislação/Obrigatório&quot;;
-	}
-	if (classificacao == &quot;projeto_implantacao&quot;) {
-		return &quot;Projeto/implantação&quot;;
-	}
-	if (classificacao == &quot;aprimoramento_profissional&quot;) {
-		return &quot;Aprimoramento profissional&quot;;
-	}
-	return classificacao;
-}
-/**
- * Retorna um array com o nome de todos os campos a serem utilizados para preencher a
- *  tabela pai-filho de treinamentos na posição correta.
- * @param {Object} ficha - Objeto com os dados da ficha do participante.
- * @returns Array com os nomes dos para adição na tabela.
- */
-function getArrayFieldNameTreinamento(ficha) {
-	var fieldsFichaTreinamento;
-	if (ficha != null) {
-		var i = getTreinamentosCount(ficha.getValue(0, &quot;documentid&quot;)) + 1;
-		fieldsFichaTreinamento = [&apos;numero_solicitacao_tb1___&apos; + i, &apos;titulo_do_treinamento_tb1___&apos; + i, &apos;classificacao_treinamento_tb1___&apos; + i,
-			&apos;planejamento_anual_tb1___&apos; + i, &apos;instituicao_treinamento_tb1___&apos; + i, &apos;justificativa_treinamento_tb1___&apos; + i,
-			&apos;carga_horaria_tb1___&apos; + i, &apos;ano_realizacao_tb1___&apos; + i
-		];
-	} else {
-		fieldsFichaTreinamento = [&apos;numero_solicitacao_tb1___1&apos;, &apos;titulo_do_treinamento_tb1___1&apos;, &apos;classificacao_treinamento_tb1___1&apos;,
-			&apos;planejamento_anual_tb1___1&apos;, &apos;instituicao_treinamento_tb1___1&apos;, &apos;justificativa_treinamento_tb1___1&apos;,
-			&apos;carga_horaria_tb1___1&apos;, &apos;ano_realizacao_tb1___1&apos;
-		];
-	}
-	log.warn(&apos;%%%%%% fieldsFichaTreinamento: &apos; + fieldsFichaTreinamento);
-	return fieldsFichaTreinamento;
-}
-/**
- * 
- * @description Verifica se o treinamento já foi inserido na table de treinamentos do participante.
- * @param {number} docId - documentid da Ficha do participante
- * @param {number} numSolic - Número da solicitação do treinamento
- * @returns - Boolean - true caso já exista, false caso ainda não exista.
- * 
- */
-function checkIfTreinamentoIsAlreadyRegistered(docId, numSolic){
-	var c1 = DatasetFactory.createConstraint(&quot;metadata#active&quot;, true, true, ConstraintType.MUST);
-	var c2 = DatasetFactory.createConstraint(&quot;documentid&quot;, docId, docId, ConstraintType.MUST);
-	var tablename = DatasetFactory.createConstraint(&quot;tablename&quot;, &quot;treinamentos_realizados&quot;, &quot;treinamentos_realizados&quot;, ConstraintType.MUST);
-	var fichaParticipante = DatasetFactory.getDataset(&quot;participante_x_treinamento&quot;, null, [c1, c2, tablename], null);
-	for (var i = 0; i &lt; fichaParticipante.rowsCount; i++) {
-		if ( fichaParticipante.getValue(i, &quot;numero_solicitacao_tb1&quot;) == numSolic ) {
-			return true;
-		}
-	}
-	return false;
-}</eventDescription>
-    </WorkflowProcessEvent>
-    <WorkflowProcessEvent>
-      <workflowProcessEventPK>
-        <companyId>1</companyId>
         <eventId>beforeSendData</eventId>
         <processId>TRN-004</processId>
         <version>1</version>
@@ -2181,22 +1693,11 @@ function checkIfTreinamentoIsAlreadyRegistered(docId, numSolic){
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <version>72</version>
-        <linkSequence>81</linkSequence>
+        <linkSequence>75</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
-      <positionX>1210</positionX>
-      <positionY>804</positionY>
-    </ProcessLinkBend>
-    <ProcessLinkBend>
-      <processLinkBendPK>
-        <companyId>1</companyId>
-        <processId>TRN-004</processId>
-        <version>72</version>
-        <linkSequence>81</linkSequence>
-        <bendSequence>2</bendSequence>
-      </processLinkBendPK>
-      <positionX>1211</positionX>
-      <positionY>964</positionY>
+      <positionX>1302</positionX>
+      <positionY>766</positionY>
     </ProcessLinkBend>
   </list>
   <list/>
@@ -2251,15 +1752,6 @@ function checkIfTreinamentoIsAlreadyRegistered(docId, numSolic){
       <attempts>0</attempts>
       <sucessFullMessage></sucessFullMessage>
       <serviceName>ECMWorkflowEngineService</serviceName>
-    </ProcessStateService>
-    <ProcessStateService>
-      <companyId>1</companyId>
-      <processId>TRN-004</processId>
-      <version>1</version>
-      <sequence>75</sequence>
-      <attempts>0</attempts>
-      <sucessFullMessage></sucessFullMessage>
-      <serviceName>ECMCardService</serviceName>
     </ProcessStateService>
   </list>
   <list/>
