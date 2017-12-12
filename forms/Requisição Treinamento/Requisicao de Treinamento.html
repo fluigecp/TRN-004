@@ -3,7 +3,7 @@
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<head>
 		<title>Form</title>
-		<script type="text/javascript" src="../vcXMLRPC.js"></script>
+		<script type="text/javascript" src="/webdesk/vcXMLRPC.js"></script>
 		<link rel="stylesheet" type="text/css" href="http://ecp.fluigcloud.com.br/portal/resources/style-guide/css/fluig-style-guide.min.css">
 		<link rel="stylesheet" type="text/css" href="CSS_Fluig.css" />
 		<link rel="stylesheet" type="text/css" href="app.css" />
@@ -188,16 +188,16 @@
 									<label for="participanteFluig">Participante possui cadastro no fluig? Selecione abaixo:
 											<span class="fluigicon fluigicon-sm bs-docs-popover-hover fluigicon-exclamation-sign"
 											data-toggle="popover" title="" data-content="Se caso o participante do treinamento possuir cadastro no Fluig, ele pode ser localizado de forma mais prática por este campo." data-original-title="Popover title"></span>
-											<strong> *</strong></label> 
+									</label> 
 								
-											<input name="participanteFluig" id="participanteFluig" class="form-control" type="zoom" data-zoom="{
-												'displayKey':'colleagueName',
-												'datasetId':'colleague',
-												'fields':[
-													{'field':'colleagueId', 'label':'Matrícula', 'standard':'true'},
-													{'field':'colleagueName', 'label':'Nome'}
-													]
-											}">
+									<input name="participanteFluig" id="participanteFluig" class="form-control" type="zoom" data-zoom="{
+										'displayKey':'colleagueName',
+										'datasetId':'colleague',
+										'fields':[
+											{'field':'colleagueId', 'label':'Matrícula', 'standard':'true'},
+											{'field':'colleagueName', 'label':'Nome'}
+											]
+									}">
 								</div>
 							</div>
 						</div>
@@ -212,17 +212,17 @@
 									<label for="funcionariosAtivos">Pesquisa por nome de funcionário. Selecione abaixo:
 											<span class="fluigicon fluigicon-sm bs-docs-popover-hover fluigicon-exclamation-sign"
 											data-toggle="popover" title="" data-content="O funcionário pode ser localizado de forma mais prática por este campo." data-original-title="Popover title"></span>
-											<strong> *</strong></label> 
-											<input name="funcionariosAtivos"  class="form-control" id="funcionariosAtivos" type="zoom" data-zoom="{
-												'displayKey':'nome',
-												'datasetId':'wsFuncionarios',
-												'filterValues': 'situacao,Ativo',
-												'fields':[
-													{'field':'matricula', 'label':'ID', 'standard':'true'},
-													{'field':'nome', 'label':'Nome'},
-													{'field':'lotacao', 'label':'Lotação'}
-													]
-												}">
+									</label> 
+									<input name="funcionariosAtivos"  class="form-control" id="funcionariosAtivos" type="zoom" data-zoom="{
+										'displayKey':'nome',
+										'datasetId':'wsFuncionarios',
+										'filterValues': 'situacao,Ativo',
+										'fields':[
+											{'field':'matricula', 'label':'ID', 'standard':'true'},
+											{'field':'nome', 'label':'Nome'},
+											{'field':'lotacao', 'label':'Lotação'}
+											]
+									}">
 								</div>
 							</div>
 						</div>
@@ -243,7 +243,7 @@
 												</label> <strong>*</strong>
 										<div class="participantesContainer">	
 										<input type="text" id="participantes" name="participantes" class="form-control"></div>
-									<textarea name="participantesView" id="participantesView" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder="" readonly></textarea>
+									<textarea name="participantesView" id="participantesView" style="resize: vertical" onclick="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder="" readonly></textarea>
 								</div>
 							</div>
 						</div>
@@ -337,7 +337,7 @@
 							<div class="form-input">
 								<div class="form-group">
 									<label>Justificativa<strong> *</strong></label>
-									<textarea name="justificativa" id="justificativa" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder=""></textarea>
+									<textarea name="justificativa" id="justificativa" style="resize: vertical" onclick="manipulateDOM.expandTextarea(this.id)" class="form-control expand" rows="3" data-size="big" placeholder=""></textarea>
 								</div>
 							</div>
 						</div>
@@ -398,8 +398,8 @@
 						<div class="form-field" data-type="textarea" data-show-properties="" data-field-name="consideracoes">
 							<div class="form-input">
 								<div class="form-group">
-									<label>Considerações<strong>*</strong></label>
-									<textarea name="consideracoes" id="consideracoes" style="resize: vertical" onkeyup="manipulateDOM.expandTextarea(this.id)" class="form-control" rows="3" data-size="big" placeholder="Nome da instituição, CNPJ, observações sobre o treinamento"></textarea>
+									<label>Considerações<strong> *</strong></label>
+									<textarea name="consideracoes" id="consideracoes" style="resize: vertical" onclick="manipulateDOM.expandTextarea(this.id)" class="form-control" rows="3" data-size="big" placeholder="Nome da instituição, CNPJ, observações sobre o treinamento"></textarea>
 								</div>
 							</div>
 						</div>
