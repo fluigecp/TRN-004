@@ -26,7 +26,7 @@
     <processDefinitionVersionPK>
       <companyId>1</companyId>
       <processId>Requisitar Treinamento</processId>
-      <version>72</version>
+      <version>73</version>
     </processDefinitionVersionPK>
     <versionDescription></versionDescription>
     <formId>0</formId>
@@ -839,7 +839,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Sim&quot;</condition>
@@ -850,7 +850,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Não&quot;</condition>
@@ -861,7 +861,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>13</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoGRA&quot;) == &quot;Cancelar&quot;</condition>
@@ -872,7 +872,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>1</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Sim&quot;</condition>
@@ -883,7 +883,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>2</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Não&quot;</condition>
@@ -894,7 +894,7 @@
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <expressionOrder>3</expressionOrder>
-        <version>72</version>
+        <version>73</version>
         <sequence>19</sequence>
       </conditionProcessStatePK>
       <condition>hAPI.getCardValue(&quot;treinamentoAprovadoRH&quot;) == &quot;Cancelar&quot;</condition>
@@ -1321,14 +1321,16 @@ function usuario(){&#xd;
 		var participantesObj = filterParticipantesObj(hAPI.getCardValue(&quot;participantes&quot;));
 		var fieldsAvaliacao = [&quot;nomeParticipante&quot;, &quot;matricula&quot;, &quot;area&quot;, &quot;cursoTreinamento&quot;,
 			&quot;instituicao&quot;, &quot;cargaHoraria&quot;, &quot;avaliadorMat&quot;, &quot;numSolicTreinamento&quot;,
-			&quot;classificacaoCurso&quot;, &quot;campoDescritor&quot;, &quot;matResponsavelArea&quot;, &quot;aberturaAutomatica&quot;];
+			&quot;classificacaoCurso&quot;, &quot;campoDescritor&quot;, &quot;matResponsavelArea&quot;, &quot;aberturaAutomatica&quot;,
+			&quot;justificativaTreinamento&quot;, &quot;anoTreinamento&quot;, &quot;processIdOrigin&quot;];
 
 		/* Checa se existem departamento entre os participantes,
 		 	caso sim, abre solitações em branco a serem preenchidas. */
 		if ( checkIfHasDepartamento(participantesObj) ) {
 			var fieldsAvaliacaoWithDepartamento = [&quot;area&quot;, &quot;cursoTreinamento&quot;, &quot;instituicao&quot;, &quot;cargaHoraria&quot;, 
 													&quot;numSolicTreinamento&quot;, &quot;classificacaoCurso&quot;, 
-													 &quot;matResponsavelArea&quot;, &quot;aberturaAutomatica&quot;];
+													 &quot;matResponsavelArea&quot;, &quot;aberturaAutomatica&quot;,&quot;justificativaTreinamento&quot;,
+													  &quot;anoTreinamento&quot;, &quot;processIdOrigin&quot;];
 			var fieldsRequisicaoWithDepartamento = [];
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue(&quot;departamento&quot;) + &quot;&quot; );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue(&quot;treinamentoSolicitado&quot;) + &quot;&quot; );
@@ -1338,6 +1340,9 @@ function usuario(){&#xd;
 			fieldsRequisicaoWithDepartamento.push( validateClassificacao( hAPI.getCardValue(&quot;classificacaoCurso&quot;) ) );
 			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue(&quot;matResponsavelDepartamento&quot;) + &quot;&quot; );
 			fieldsRequisicaoWithDepartamento.push( &quot;Sim&quot; );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue(&quot;justificativa&quot;) + &quot;&quot; );
+			fieldsRequisicaoWithDepartamento.push( hAPI.getCardValue(&quot;anoVigencia&quot;) + &quot;&quot; );
+			fieldsRequisicaoWithDepartamento.push( &quot;TRN-004&quot; );
 			var qtdeParticipantes = parseInt( hAPI.getCardValue(&quot;totalParticipantes&quot;) );
 			for (var y = 0; y &lt; qtdeParticipantes; y++) {
 				var cardData = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);
@@ -1374,6 +1379,9 @@ function usuario(){&#xd;
 				fieldsRequisicao.push(participantesObj[i].nome + &quot; - &quot; + hAPI.getCardValue(&quot;treinamentoSolicitado&quot;) + &quot;&quot;);
 				fieldsRequisicao.push(responsavelArea + &quot;&quot;);
 				fieldsRequisicao.push(&quot;Sim&quot;);
+				fieldsRequisicao.push( hAPI.getCardValue(&quot;justificativa&quot;) + &quot;&quot; );
+				fieldsRequisicao.push( hAPI.getCardValue(&quot;anoVigencia&quot;) + &quot;&quot; );
+				fieldsRequisicao.push( &quot;TRN-004&quot; );
 				var cardData = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArrayArray&quot;);
 				for (var x = 0; x &lt; fieldsAvaliacao.length; x++) {
 					var objField = servico.instantiate(&quot;net.java.dev.jaxb.array.StringArray&quot;);
@@ -1514,7 +1522,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>loginUserWS</propertyId>
-        <version>72</version>
+        <version>73</version>
       </advancedProcessPropertiesPK>
       <propertieValue>servico</propertieValue>
     </AdvancedProcessProperties>
@@ -1523,7 +1531,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>matUserWS</propertyId>
-        <version>72</version>
+        <version>73</version>
       </advancedProcessPropertiesPK>
       <propertieValue>0000</propertieValue>
     </AdvancedProcessProperties>
@@ -1532,7 +1540,7 @@ function searchUserMat(mat) {
         <companyId>1</companyId>
         <processId>TRN-004</processId>
         <propertyId>passwdUserWS</propertyId>
-        <version>72</version>
+        <version>73</version>
       </advancedProcessPropertiesPK>
       <propertieValue>fcea920f7412b5da7be0cf42b8c93759</propertieValue>
     </AdvancedProcessProperties>
@@ -1626,7 +1634,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>12</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1637,7 +1645,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>44</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1648,7 +1656,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>46</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1659,7 +1667,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>56</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1670,7 +1678,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>72</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1681,7 +1689,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>72</linkSequence>
         <bendSequence>2</bendSequence>
       </processLinkBendPK>
@@ -1692,7 +1700,7 @@ function searchUserMat(mat) {
       <processLinkBendPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <linkSequence>75</linkSequence>
         <bendSequence>1</bendSequence>
       </processLinkBendPK>
@@ -1706,7 +1714,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <stateSequence>0</stateSequence>
         <propertyName>loginUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -1719,7 +1727,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <stateSequence>0</stateSequence>
         <propertyName>matUserWS</propertyName>
       </extendedPropertyFieldPK>
@@ -1732,7 +1740,7 @@ function searchUserMat(mat) {
       <extendedPropertyFieldPK>
         <companyId>1</companyId>
         <processId>TRN-004</processId>
-        <version>72</version>
+        <version>73</version>
         <stateSequence>0</stateSequence>
         <propertyName>passwdUserWS</propertyName>
       </extendedPropertyFieldPK>
