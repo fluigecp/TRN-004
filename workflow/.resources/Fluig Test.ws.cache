@@ -1247,7 +1247,7 @@
        <int>1</int>
       </void>
       <void property="processDescription">
-       <string>Controlar plano de competição</string>
+       <string>Controlar plano de competições esportivas</string>
       </void>
       <void property="processId">
        <string>ESP-001</string>
@@ -2707,6 +2707,1155 @@
       </void>
       <void property="processId">
        <string>UCP-026</string>
+      </void>
+     </object>
+    </void>
+   </object>
+  </void>
+  <void method="put">
+   <string>mecanismoPapel</string>
+   <object class="java.util.ArrayList">
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>admin</string>
+      </void>
+      <void property="roleId">
+       <string>admin</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Default</string>
+      </void>
+      <void property="roleId">
+       <string>Default</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Indicador dos vericadores de eficácia</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Elaborar_Plano_Acao_2</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Aprovador das ocorrências</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Elaborar_Plano_Acao_1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Aprovador das tarefas plano de ação</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Tarefas_Plano_Acao_1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Aprovadores da pesquisa do SGQ</string>
+      </void>
+      <void property="roleId">
+       <string>WF_PesquisaSGQ_Aprovador</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Presidente</string>
+      </void>
+      <void property="roleId">
+       <string>Presidente</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Coordenador Divulgacao Digital</string>
+      </void>
+      <void property="roleId">
+       <string>Coordenador_Divulgacao_Digital</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Validador da eficacia do plano de ação</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Elaborar_Plano_Acao_3</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Avaliador da RNC</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Controlar_RNC_1</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Verificador de responsavel</string>
+      </void>
+      <void property="roleId">
+       <string>Workflow_Controlar_RNC_2</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Coordenador de eventos</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Solicitar_Eventos_Coordenador</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Papel de teste</string>
+      </void>
+      <void property="roleId">
+       <string>Teste</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gerente Geral</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Solicitar_Eventos_GerenteGeral</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Serviço Fluig</string>
+      </void>
+      <void property="roleId">
+       <string>Servico_Fluig</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Usuários que tomarão conhecimento dos contratos</string>
+      </void>
+      <void property="roleId">
+       <string>Teste_Tomar_Conhecimento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Usuarios que tomarao conhecimento dos contratos de baixo risco</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Baixo_Risco_Tomar_Conhecimento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Aprovador meio ambiente</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Aprovador_Meio_Ambiente</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por executar o treinamento</string>
+      </void>
+      <void property="roleId">
+       <string>Teste_ExecTreinamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor do processo Realizar Auditoria Interna do SGQ</string>
+      </void>
+      <void property="roleId">
+       <string>WK_SGQ-001_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor de esportes responsável por aprovar o Plano de Competição</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-003_Aprovar_Plano_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Secretaria da presidência responsável por aprovar o Plano de Competição</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-003_Aprovar_Plano_Presidencia</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por abrir o expediente</string>
+      </void>
+      <void property="roleId">
+       <string>WK_COD-001_inicio</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por preencher os dados do oficio</string>
+      </void>
+      <void property="roleId">
+       <string>WK_COD-001_PreencherOficio</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor do processo COD-001</string>
+      </void>
+      <void property="roleId">
+       <string>WK_COD-001_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por receber a resposta do expediente</string>
+      </void>
+      <void property="roleId">
+       <string>WK_COD-001_responsavel</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável pelo tratamento de erro</string>
+      </void>
+      <void property="roleId">
+       <string>WK_COD-001_Erro</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administração de Relações Esportivas e Associativos Competitivos responsável por autorizar PV</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Relacoes_Esportivas_Associativos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administração de Esportes Olímpicos e Formação responsável por autorizar PV</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olimpicos_Formacao</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Diretor de Área de Esportes de Formação e Olímpicos</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Diretor_Area_Esportes_Olimpicos_Formacao</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Diretor de Área de Relações Esportivas</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Diretor_Relacoes_Esportivas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Diretor de Área de Esportes Associativos e Competitivos</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Diretor_Associativos_Competitivos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Diretor de Esportes Individuais e Aquáticos</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Exec_Diretor_Esportes_Ind_Aquaticos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Diretor de Esportes Coletivos e Raquetes</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Exec_Diretor_Esportes_Col_Raquetes</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gerente de Esportes Olímpicos e Formação responsável por aprovar as PV</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Gerente_Esportes_Olimpicos_Formacao</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gerente de Relações Esportivas e Associativos Competitivos responsável por aprovar as PV</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Gerente_Rel_Esportivas_Assoc_Competitivo</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Usuários responsáveis por prestar contas das PV&apos;s de Esportes Olímpicos e Formação</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olim_Form_PrestarContas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por prestar contas das PV&apos;s de Relações Esportivas</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Relacoes_Esportivas_PrestarContas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por tomar conhecimento das PV&apos;s aprovadas de Relações Esportivas e Assoc Competitivas</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Tomar_Conhecimento_Rel_Esportivas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por tomar conhecimento das PV&apos;s aprovadas de Esportes Olimpicos e Formação</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Tomar_Conhecimento_Olimp_Form</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por validar informações financeiras</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Validar_Informacoes_Financeiras</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por tomar conhecimento da decisão do Presidente</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Tomar_Conhecimento_Decisao</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por executar a atividade validar protocolo de participação</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Coordenador_Eventos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável da Gerência Geral pela atividade Aprovar Evento</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Aprovar_Evento_GGR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável da Presidência pela execução da atividade Aprovar Evento</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Aprovar_Evento_Presidencia</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por Aprovar Prestação de Contas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_EVL-001_Aprovar_Prestacao_Contas</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestores do processo MED-003</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED-003_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Executor da atividade Aprovar Registro de Infração</string>
+      </void>
+      <void property="roleId">
+       <string>WK_ADM-001_Aprovar_Registro</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Executor da atividade Levantar evidências</string>
+      </void>
+      <void property="roleId">
+       <string>WK_ADM-001_Levantamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Executor da atividade Aprovar Ocorrência</string>
+      </void>
+      <void property="roleId">
+       <string>WK_ADM-001_Aprovar</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Executor da atividade Tomar decisão de despacho</string>
+      </void>
+      <void property="roleId">
+       <string>WK_ADM-001_Despacho</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor de Registro de Infração Disciplinar</string>
+      </void>
+      <void property="roleId">
+       <string>WK_ADM-001_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestores do processo MED-011</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED-011_Gestores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestores do processo MED-012</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED-012_Gestores</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por aprovar o planejamento dos treinamentos</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Aprovar_Planejamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por aprovar planejamento - Gerência Geral</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Aprovar_Planejamento_GGR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por aprovar o treinamento</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Aprovar_Treinamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por aprovar o treinamento - Gerência Geral</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Aprovar_Treinamento_GGR</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por executar planejamento</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Executar_Planejamento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor do processo Propor Treinamentos Anuais</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsáveis por executar atividade tomar conhecimento</string>
+      </void>
+      <void property="roleId">
+       <string>WK_TRN-002_Tomar_Conhecimento</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Avaliador Pesquisa SGQ</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Executar_Pesquisa_SGQ_Avaliador</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestor de Pesquisa do SGQ</string>
+      </void>
+      <void property="roleId">
+       <string>WK_Executar_Pesquisa_SGQ_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestores do processo MED-007</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED-007_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Gestores do processo MED-002</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED-002_Gestor</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Psicólogos</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_PSICOLOGIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Ortopedistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_ORTOPEDIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Nutricionistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_NUTRICAO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Fisioterapeutas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_FISIOTERAPIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Fisiologistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_FISIOLOGIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Especiais</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_ESPECIAIS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administrativo</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MED_ADMINISTRACAO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Fisiologistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_FISIOLOGIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Fisioterapeutas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_FISIOTERAPIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Nutricionistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_NUTRICIONISMO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Ortopedistas</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_ORTOPEDIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Psicólogos</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_PSICOLOGIA</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Especiais</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_ESPECIAIS</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administrativo</string>
+      </void>
+      <void property="roleId">
+       <string>WK_MEDICO_ADMINISTRACAO</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por informar o resultado alcançado - Adm de Esportes Recreativos</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Recre_Comp_Resultado</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por informar o resultado alcançado - Adm de Esportes Olímpicos e Formação</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olim_Form_Resultado</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administração de Esportes Olímpicos e Formação responsável por autorizar PV interna</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olimpicos_Formacao_I</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Usuários responsáveis por prestar contas das PV&apos;s internas de Esportes Olímpicos e Formação</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olim_Form_PrestarContas_I</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por prestar contas das PV&apos;s internas de Relações Esportivas</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Relacoes_Esportivas_PrestarContas_I</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administração de Esportes Olímpicos e Formação responsável por autorizar Plano de Competição</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-003_Adm_Olimpicos_Formacao</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Administração de Relações Esportivas e Associativos Competitivos responsável por autorizar Plano de Competição</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-001_Adm_Relacoes_Esportivas_Associativos</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por informar o resultado alcançado PV interna - Adm de Esportes Olímpicos e Formação</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Olim_Form_Resultado_I</string>
+      </void>
+     </object>
+    </void>
+    <void method="add">
+     <object class="com.totvs.tds.ecm.foundation.ws.WorkflowRoleDto">
+      <void property="companyId">
+       <long>1</long>
+      </void>
+      <void property="roleDescription">
+       <string>Responsável por informar o resultado alcançado interno - Adm de Esportes Recreativos</string>
+      </void>
+      <void property="roleId">
+       <string>ESP-004_Adm_Recre_Comp_Resultado_I</string>
       </void>
      </object>
     </void>

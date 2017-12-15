@@ -4072,7 +4072,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow16"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.57" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.57" transparency="0.0" value="Sim" x="10" xsi:type="al:Text"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4149,7 +4149,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow55"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.108" transparency="0.0" value="" x="7" xsi:type="al:Text" y="17"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.108" transparency="0.0" value="N&#227;o" x="7" xsi:type="al:Text" y="17"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4164,7 +4164,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow56"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.109" transparency="0.0" value="" x="21" xsi:type="al:Text" y="-4"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.109" transparency="0.0" value="Sim" x="21" xsi:type="al:Text" y="-4"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4180,7 +4180,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow57"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.110" transparency="0.0" value="" x="-10" xsi:type="al:Text" y="1"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.110" transparency="0.0" value="Sim" x="-10" xsi:type="al:Text" y="1"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4225,7 +4225,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow61"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.125" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.125" transparency="0.0" value="Cancelar" x="10" xsi:type="al:Text"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4240,7 +4240,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow63"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.127" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.127" transparency="0.0" value="Cancelar" x="10" xsi:type="al:Text"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4287,7 +4287,7 @@
       <graphicsAlgorithm filled="false" foreground="/0/@colors.3" lineWidth="1" transparency="0.0" xsi:type="al:Polyline"/>
       <link businessObjects="flow74"/>
       <connectionDecorators active="true" location="0.5" locationRelative="true" visible="true">
-        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.144" transparency="0.0" value="" x="10" xsi:type="al:Text"/>
+        <graphicsAlgorithm filled="false" font="/0/@fonts.0" lineWidth="1" style="/0/@styles.144" transparency="0.0" value="Avalia&#231;&#227;o Iniciada" x="-43" xsi:type="al:Text" y="6"/>
       </connectionDecorators>
       <connectionDecorators location="1.0" locationRelative="true" visible="true">
         <graphicsAlgorithm background="/0/@colors.3" filled="true" foreground="/0/@colors.3" lineWidth="1" style="/0/@styles.5" transparency="0.0" xsi:type="al:Polygon">
@@ -4336,7 +4336,7 @@
     <fonts name="Arial" size="8"/>
     <fonts bold="true" name="Arial" size="8"/>
   </pi:Diagram>
-  <bpmn2:BpmnProcess author="" cardIndex="Requisi&#231;&#227;o Treinamento" category="Treinamento" complementsLevel="1" expedient="Default" extendedFields="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;loginUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;loginUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;servico&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;matUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;matUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;0000&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;passwdUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;passwdUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;fcea920f7412b5da7be0cf42b8c93759&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;&lt;/list&gt;" formSource="local" id="TRN-004" instruction="" keyWord="" name="Requisitar Treinamento" notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="Fluig Test" version="73" volume="Default"/>
+  <bpmn2:BpmnProcess author="" cardIndex="Requisi&#231;&#227;o Treinamento" category="Treinamento" complementsLevel="1" expedient="Default" extendedFields="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;loginUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;loginUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;servico&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;matUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;matUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;0000&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;    &lt;propertyName&gt;passwdUserWS&lt;/propertyName&gt;&#10;    &lt;propertyType&gt;0&lt;/propertyType&gt;&#10;    &lt;propertyDescription&gt;passwdUserWS&lt;/propertyDescription&gt;&#10;    &lt;propertyValue&gt;fcea920f7412b5da7be0cf42b8c93759&lt;/propertyValue&gt;&#10;    &lt;isDefaultProperty&gt;false&lt;/isDefaultProperty&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ExtendedPropertyImpl&gt;&#10;&lt;/list&gt;" formSource="local" id="TRN-004" instruction="" keyWord="" name="Requisitar Treinamento" notifyRequisitionerComplements="true" notifyResponsibleComplements="true" serverId="Fluig Test" version="74" volume="Default"/>
   <bpmn2:BpmnStartEvent esforcoCalculo="0" expediente="" id="startevent4" initializerConfiguration="&lt;org.eclipse.bpmn2.impl.AssignmentControllerGroup&gt;&#10;  &lt;groupId&gt;WK_TRN-004_Inicial&lt;/groupId&gt;&#10;  &lt;mechanismName&gt;Grupo&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerGroup&gt;" name="In&#237;cio" outgoing="flow12" signalId="0" type="10"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" id="task5" incoming="flow12 flow29" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerFormField&gt;&#10;  &lt;formField&gt;matResponsavelDepartamento&lt;/formField&gt;&#10;  &lt;mechanismName&gt;Campo Formul&#225;rio&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerFormField&gt;" managerMechanism="Campo Formul&#225;rio" name="Aprovar treinamento" outgoing="flow58" type="80"/>
   <bpmn2:BpmnSwimLane cores="C0C7CC" id="swimlane2" name="Gerente &#193;rea"/>
@@ -4345,7 +4345,7 @@
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow12" name="" sourceRef="startevent4" targetRef="task5"/>
   <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoGRA&amp;quot;) == &amp;quot;Sim&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task15&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;2&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoGRA&amp;quot;) == &amp;quot;N&#227;o&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task17&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;3&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoGRA&amp;quot;) == &amp;quot;Cancelar&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;endcancel60&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway13" incoming="flow58" name="Aprovado?" outgoing="flow16 flow56 flow61" type="120"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" id="task15" incoming="flow16" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolGroup&gt;&#10;  &lt;groupId&gt;WK_TRN-004_Aprovar_Treinamento&lt;/groupId&gt;&#10;  &lt;mechanismName&gt;Pool Grupo&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolGroup&gt;" managerMechanism="Pool Grupo" name="Aprovar treinamento" outgoing="flow20" type="80"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow16" name="" sourceRef="exclusivegateway13" targetRef="task15"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow16" name="Sim" sourceRef="exclusivegateway13" targetRef="task15"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="" id="task17" incoming="flow55 flow56" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;&#10;  &lt;idNode&gt;startevent4&lt;/idNode&gt;&#10;  &lt;returns&gt;1&lt;/returns&gt;&#10;  &lt;mechanismName&gt;Executor Atividade&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerExecutorMechanism&gt;" managerMechanism="Executor Atividade" name="Atualizar treinamento" outgoing="flow59" type="80"/>
   <bpmn2:BpmnGateway condition="&lt;list&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;1&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoRH&amp;quot;) == &amp;quot;Sim&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task41&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;2&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoRH&amp;quot;) == &amp;quot;N&#227;o&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;task17&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;  &lt;org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;    &lt;order&gt;3&lt;/order&gt;&#10;    &lt;expression&gt;hAPI.getCardValue(&amp;quot;treinamentoAprovadoRH&amp;quot;) == &amp;quot;Cancelar&amp;quot;&lt;/expression&gt;&#10;    &lt;targetTask&gt;endcancel62&lt;/targetTask&gt;&#10;  &lt;/org.eclipse.bpmn2.impl.ConditionImpl&gt;&#10;&lt;/list&gt;" id="exclusivegateway19" incoming="flow20" name="Aprovado?" outgoing="flow55 flow57 flow63" type="120"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow20" name="" sourceRef="task15" targetRef="exclusivegateway19"/>
@@ -4357,15 +4357,15 @@
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow44" name="" sourceRef="task41" targetRef="task43"/>
   <bpmn2:BpmnTask authNotify="true" esforcoCalculo="0" executionAttempts="0" expediente="Hor&#225;rio_Comercial" id="task45" incoming="flow46" loopType="0" managerAssignmentControllerString="&lt;org.eclipse.bpmn2.impl.AssignmentControllerPoolGroup&gt;&#10;  &lt;groupId&gt;WK_TRN-004_Finalizar_Treinamento&lt;/groupId&gt;&#10;  &lt;mechanismName&gt;Pool Grupo&lt;/mechanismName&gt;&#10;&lt;/org.eclipse.bpmn2.impl.AssignmentControllerPoolGroup&gt;" managerMechanism="Pool Grupo" name="Finalizar treinamento" outgoing="flow75" prazoConclusao="480.0" type="80"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow46" name="" sourceRef="task43" targetRef="task45"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow55" name="" sourceRef="exclusivegateway19" targetRef="task17"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow56" name="" sourceRef="exclusivegateway13" targetRef="task17"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow57" name="" sourceRef="exclusivegateway19" targetRef="task41"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow55" name="N&#227;o" sourceRef="exclusivegateway19" targetRef="task17"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow56" name="Sim" sourceRef="exclusivegateway13" targetRef="task17"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow57" name="Sim" sourceRef="exclusivegateway19" targetRef="task41"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow58" name="" sourceRef="task5" targetRef="exclusivegateway13"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow59" name="" sourceRef="task17" targetRef="intermediatelink30"/>
   <bpmn2:BpmnEndEvent id="endcancel60" incoming="flow61" name="Fim com cancelamento de processo" signalId="0" type="65"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow61" name="" sourceRef="exclusivegateway13" targetRef="endcancel60"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow61" name="Cancelar" sourceRef="exclusivegateway13" targetRef="endcancel60"/>
   <bpmn2:BpmnEndEvent id="endcancel62" incoming="flow63" name="Fim com cancelamento de processo" signalId="0" type="65"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow63" name="" sourceRef="exclusivegateway19" targetRef="endcancel62"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow63" name="Cancelar" sourceRef="exclusivegateway19" targetRef="endcancel62"/>
   <bpmn2:BpmnSwimLane cores="DFDFDF" id="bpmnswimlane65" name="Fluig"/>
   <bpmn2:BpmnSwimLane cores="C0C7CC" id="bpmnswimlane66" name="Processos"/>
   <bpmn2:BpmnTask attachedEvents="intermediateerror71" authNotify="true" esforcoCalculo="0" executionAttempts="0" executionType="1" expediente="" id="servicetask67" incoming="flow70 flow75" loopType="0" name="Iniciar avalia&#231;&#227;o de rea&#231;&#227;o" outgoing="flow74" scriptFileName="Requisicao-Treinamento.servicetask67.js" serviceName="ECMWorkflowEngineService" type="82"/>
@@ -4374,6 +4374,6 @@
   <bpmn2:BpmnIntermediateEvent id="intermediateerror71" name="Intermedi&#225;rio" outgoing="flow72" parentTask="servicetask67" sequenceAttached="67" signalId="0" type="43"/>
   <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow72" name="" sourceRef="intermediateerror71" targetRef="task69"/>
   <bpmn2:BpmnEndEvent id="endevent73" incoming="flow74" name="Fim" signalId="0" type="60"/>
-  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow74" name="" sourceRef="servicetask67" targetRef="endevent73"/>
-  <bpmn2:SequenceFlow id="flow75" name="" sourceRef="task45" targetRef="servicetask67"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow74" name="Avalia&#231;&#227;o Iniciada" sourceRef="servicetask67" targetRef="endevent73"/>
+  <bpmn2:SequenceFlow atividadeFluxo="" atividadeRetorno="" extendedFields="&lt;list/&gt;" id="flow75" name="" sourceRef="task45" targetRef="servicetask67"/>
 </xmi:XMI>
