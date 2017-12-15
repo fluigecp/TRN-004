@@ -185,7 +185,7 @@
 						<div class="form-field" data-type="textbox" data-show-properties="" data-field-name="participanteFluig">
 							<div class="form-input">
 								<div class="form-group">
-									<label for="participanteFluig">Participante possui cadastro no fluig? Selecione abaixo:
+									<label for="participanteFluig">Participante possui cadastro ativo no fluig? Selecione abaixo:
 											<span class="fluigicon fluigicon-sm bs-docs-popover-hover fluigicon-exclamation-sign"
 											data-toggle="popover" title="" data-content="Se caso o participante do treinamento possuir cadastro no Fluig, ele pode ser localizado de forma mais prática por este campo." data-original-title="Popover title"></span>
 									</label> 
@@ -193,6 +193,7 @@
 									<input name="participanteFluig" id="participanteFluig" class="form-control" type="zoom" data-zoom="{
 										'displayKey':'colleagueName',
 										'datasetId':'colleague',
+										'filterValues': 'active,true',
 										'fields':[
 											{'field':'colleagueId', 'label':'Matrícula', 'standard':'true'},
 											{'field':'colleagueName', 'label':'Nome'}
